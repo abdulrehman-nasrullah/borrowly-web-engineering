@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Borrowly - Pakistan's community peer-to-peer equipment and goods rental marketplace. Borrow what you need, rent what you don't.">
+  <title>Borrowly — Peer-to-Peer Community Rental Marketplace</title>
+
+  <!-- Google Fonts: Barlow Condensed (Headings/Prices) & Inter (Body/UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;1,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Google Material Symbols Outlined -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+
+  <!-- Plain CSS3 Global Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Vanilla JavaScript -->
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. SHARED HEADER & NAVIGATION
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container header-container">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-link" aria-label="Borrowly Home">
+        <img src="stitch_borrowly_peer_rental_marketplace/screenshot_2026_10_19_005657.png/screen.png" alt="Borrowly" class="brand-logo-img">
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <a href="browse.html" class="nav-link">BROWSE RENTALS</a>
+        <a href="#how-it-works" class="nav-link">HOW IT WORKS</a>
+        <a href="#categories" class="nav-link">CATEGORIES</a>
+      </nav>
+
+      <!-- Header Actions: Search, List Item, Profile / Login -->
+      <div class="header-actions">
+        <div class="header-search">
+          <span class="material-symbols-outlined">search</span>
+          <input type="text" class="header-search-input" placeholder="Search gear in Karachi, Lahore..." aria-label="Search items">
+        </div>
+
+        <a href="list-item.html" class="btn btn-primary">LIST AN ITEM</a>
+
+        <a href="login.html" class="user-profile-badge" title="Sign In or View Profile">
+          <span class="material-symbols-outlined" style="font-size: 1.25rem;">person</span>
+        </a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button type="button" class="mobile-menu-btn" id="mobileMenuToggle" aria-label="Open mobile navigation" aria-expanded="false">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile Navigation">
+    <a href="browse.html" class="nav-link">BROWSE RENTALS</a>
+    <a href="#how-it-works" class="nav-link">HOW IT WORKS</a>
+    <a href="#categories" class="nav-link">CATEGORIES</a>
+    <a href="dashboard.html" class="nav-link">MY DASHBOARD</a>
+    <a href="list-item.html" class="btn btn-primary" style="margin-top: 0.5rem;">LIST AN ITEM</a>
+  </nav>
+
+  <!-- ========================================================================
+       MAIN CONTENT LANDMARKS
+       ======================================================================== -->
+  <main class="main-content">
+
+    <!-- ======================================================================
+         2. HERO SECTION
+         ====================================================================== -->
+    <section class="hero-section">
+      <!-- Right Hero Photography Background with Smooth Gradient Overlay -->
+      <div class="hero-bg-wrapper">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH0f0XbCydUh9LAeQHgM5vjDZXu7HLrc0Gaxya6nrWakoAeTp_1efe2E0yfU_bIRHzn3hSVmTPFzmYxogGd9DwQzv6CqWNHG30ePldZuKEFKkJ_B_PNTl8R3A1EMNJxz5SOU6WPKYM6liY5jr0hNoBo7SHjIAEbmm3kJLumKy0IKEmmSprLBnhJNGAT60fVZMwkSC80bIOLmRhIrL7KCxL0ER5FLf1WC00xub8Ofx9RvHh6YJunVG_" alt="Borrowly utility and electronics rental gear studio setup" class="hero-bg-img">
+        <div class="hero-overlay"></div>
+      </div>
+
+      <!-- Left Hero Editorial Content -->
+      <div class="container hero-container">
+        <div class="hero-content">
+          <!-- Eyebrow -->
+          <div class="hero-eyebrow">
+            <span class="hero-dot"></span>
+            <span class="hero-eyebrow-text">PAKISTAN'S COMMUNITY RENTAL MARKETPLACE</span>
+          </div>
+
+          <!-- Bold H1 Headline -->
+          <h1 class="hero-headline">
+            <span class="hero-headline-light">BORROW WHAT</span>
+            <span class="hero-headline-accent">YOU NEED.</span>
+          </h1>
+
+          <!-- Descriptive Subtext -->
+          <p class="hero-subtext">
+            Rent everyday items from people near you for a small daily price, or earn from what you rarely use.
+          </p>
+
+          <!-- 3-Column Trust Bullet Points -->
+          <div class="hero-trust-row">
+            <div class="hero-trust-item">
+              <span class="material-symbols-outlined">sell</span>
+              <div>
+                <div class="hero-trust-title">Daily prices</div>
+                <div class="hero-trust-sub">Set by owners</div>
+              </div>
+            </div>
+            <div class="hero-trust-item">
+              <span class="material-symbols-outlined">verified_user</span>
+              <div>
+                <div class="hero-trust-title">Owner approved</div>
+                <div class="hero-trust-sub">Every request</div>
+              </div>
+            </div>
+            <div class="hero-trust-item">
+              <span class="material-symbols-outlined">location_on</span>
+              <div>
+                <div class="hero-trust-title">Local pickup</div>
+                <div class="hero-trust-sub">Near you</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Action Buttons -->
+          <div class="hero-cta-row">
+            <a href="#browse-section" class="btn btn-primary btn-lg">
+              <span>BROWSE ITEMS</span>
+              <span class="material-symbols-outlined" style="font-size: 1.125rem;">arrow_forward</span>
+            </a>
+            <a href="list-item.html" class="hero-link-btn">
+              <span>LIST AN ITEM &gt;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. SEARCH PANEL & QUICK-PICK CATEGORY CHIPS
+         ====================================================================== -->
+    <section class="container search-section" aria-label="Search Equipment and Goods">
+      <div class="search-card">
+        <!-- Form Search Controls -->
+        <form class="search-form-row" onsubmit="event.preventDefault();">
+          <!-- Text Input -->
+          <div class="search-input-col">
+            <span class="material-symbols-outlined">search</span>
+            <input type="text" class="search-main-input" id="searchInput" placeholder="Try 'Cordless drill' or 'Casio calculator'" aria-label="Search item name or keyword">
+          </div>
+
+          <!-- Category Dropdown Select -->
+          <div class="search-category-col">
+            <select class="search-category-select" id="categorySelect" aria-label="Filter by Category">
+              <option value="all">All categories</option>
+              <option value="electronics">Electronics &amp; Calculators</option>
+              <option value="books">Books &amp; Study Material</option>
+              <option value="tools">Tools &amp; Hardware</option>
+              <option value="kitchen">Kitchen &amp; Home</option>
+              <option value="outdoor">Sports &amp; Outdoor</option>
+              <option value="clothing">Clothing &amp; Accessories</option>
+            </select>
+            <span class="material-symbols-outlined">expand_more</span>
+          </div>
+
+          <!-- Red Search Action Button -->
+          <button type="button" class="btn btn-primary search-btn" id="searchBtn">
+            <span>SEARCH</span>
+          </button>
+        </form>
+
+        <!-- Category Filter Chips -->
+        <div class="search-chips-row" role="tablist" aria-label="Quick Category Filter">
+          <button type="button" class="chip-btn active" data-category="all">All</button>
+          <button type="button" class="chip-btn" data-category="electronics">Electronics</button>
+          <button type="button" class="chip-btn" data-category="books">Books</button>
+          <button type="button" class="chip-btn" data-category="tools">Tools</button>
+          <button type="button" class="chip-btn" data-category="kitchen">Kitchen</button>
+          <button type="button" class="chip-btn" data-category="outdoor">Outdoor</button>
+          <button type="button" class="chip-btn" data-category="clothing">Clothing</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. BROWSE BY CATEGORY
+         ====================================================================== -->
+    <section class="categories-section" id="categories">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-title-wrap">
+          <div class="section-accent-line"></div>
+          <h2 class="section-title">BROWSE BY CATEGORY</h2>
+          <div class="section-accent-line"></div>
+        </div>
+
+        <!-- 6 Responsive Category Cards -->
+        <div class="categories-grid">
+          <!-- Category 1 -->
+          <a href="browse.html?category=electronics" class="category-card">
+            <div class="category-img-wrap">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvkyIVYARaQCWOMJrPtk8nIB_GHLc9WaOB4TOsINfOb7c9z53hZRKVRG9gvOvYJ54rXWDnl07uor4FgRRXx-tHlMqO_PqroENTCgSF_hyJe9eCNkKcFs4vrYEj9v5EtARMkBdCtQVgGZWIhmF9mCWigrktCI4Opiqr5_5gQagpZ4qy6hitnjtPenzqTvpZY9n2tc98AZqlVTXF-pEIxxD5zkQdMF_MPMzrXFZ5Mh79ZpDIQM1c9PGB" alt="Electronics & Calculators" class="category-img">
+            </div>
+            <h3 class="category-title">Electronics &amp; Calculators</h3>
+            <p class="category-desc">Calculators, cameras and gadgets</p>
+            <span class="category-link-tag">BROWSE NOW &gt;</span>
+          </a>
+
+          <!-- Category 2 -->
+          <a href="browse.html?category=books" class="category-card">
+            <div class="category-img-wrap">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM5TeG6j_ud-jpE7SCmSmOmvf1qmwPEGE6ybVDNw-NuTvSqRE2PR-_S0AR3VdI6FXpWqLubJTVzuGvfwkgwnJOJS8ks_WaDyMQ96p9bCtjiQ7H9ZTjUXeGVQHOX1p_SivdwDW5q-Ai-5CBdvvpE0t_YarxQF2d-8CiFcXx7JG-C6y-ZROAWSVjpE8XjzHc_SXPNWSKrikwXflRrfRlNLEm2ZJaDN-3W6nJnRpM9DAQJFOB-WNnotS8" alt="Books & Study Material" class="category-img">
+            </div>
+            <h3 class="category-title">Books &amp; Study Material</h3>
+            <p class="category-desc">Textbooks, notes and kits</p>
+            <span class="category-link-tag">BROWSE NOW &gt;</span>
+          </a>
+
+          <!-- Category 3 -->
+          <a href="browse.html?category=tools" class="category-card">
+            <div class="category-img-wrap">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYnh_ORB4ltAF3SmUHuFvwtZrjHYIegMkaLHjjVlkX7wg5lNde33f_tkB5LDzfGtf3C9Z0YdEeyxnvlnaZWD8bQXAsouMxsvq1Xsy0L8ALbLnMt9b4T10wPGlgqKshVF_-4mHlVWscx0k8FU14TjhGXk_xcXv2ngBXQs_uuqay43a3EPUuss5Qmgqib7wnD3U8-ux6NlMT6fhYs0LSx4Z72GY0a1mcvOjFEJ45_epHXOtHqEC261AG" alt="Tools & Hardware" class="category-img">
+            </div>
+            <h3 class="category-title">Tools &amp; Hardware</h3>
+            <p class="category-desc">Drills, ladders and hardware</p>
+            <span class="category-link-tag">BROWSE NOW &gt;</span>
+          </a>
+
+          <!-- Category 4 -->
+          <a href="browse.html?category=kitchen" class="category-card">
+            <div class="category-img-wrap">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMWQDBjrf7YbGX52nj4dtKte4uz2XWeIoIbWXityGZjwxTn4xJ-9fVvLPbsSkII7PN9pzeOEZzotdF_7tbvGckMtyMhYQi6u_ICunWrHMiB0_aaElNVcA3cMW7Cg5PfWLHrg36iVz_uQDN9XZstuLH1D-zWwBxvZWfnHepKVisE4NIcirnOZep7k16FFYt6L8_9rMf0rSCXTqb7MUcHS5o--JWuO-eTEuUrrFg1geQpbhsJI8UpQXK" alt="Kitchen & Home" class="category-img">
+            </div>
+            <h3 class="category-title">Kitchen &amp; Home</h3>
+            <p class="category-desc">Cookers, mixers and more</p>
+            <span class="category-link-tag">BROWSE NOW &gt;</span>
+          </a>
+
+          <!-- Category 5 -->
+          <a href="browse.html?category=outdoor" class="category-card">
+            <div class="category-img-wrap">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtEoGYFex4DZuNgHh86FlXcoFTWWo6hvI1qHlTD--nOQYpSvaG-NhD9tURzXAes_eqBHHB4-qfxX9wCDlxEv6eNCyQfJh0FF7JVE0WpG5KEmGeCso34eb_Mhdcj-XTL-ReQT9qEoSMfnPDiwNx25AYr7LFaY1qLRKdGj_M5zJHDiezXOt-ucj6LitwySOZVBkJ8wjP17hOMdPntHjoiXRTiP5ozLENhfuOLvoRIW43LkvFYzlA7ix2" alt="Sports & Outdoor" class="category-img">
+            </div>
+            <h3 class="category-title">Sports &amp; Outdoor</h3>
+            <p class="category-desc">Tents, bikes and gear</p>
+            <span class="category-link-tag">BROWSE NOW &gt;</span>
+          </a>
+
+          <!-- Category 6 -->
+          <a href="browse.html?category=clothing" class="category-card">
+            <div class="category-img-wrap">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVFNbm_4ATD4j_b1azuOA5P1AZEoFAYpnxS3WiBF_09VixnnhwQ-vaXs9NQr0U8cVXwfWvhHXZm3xjRDeSd3LjhxeGfYMQpNgTAo2wEKm2Sfh65d66FncqrD7gJ5er8KTP2xoe47yRbvP6FeF0P73Eaph0aSnG52z7WMBqtFMHhCIRJcwbVSJs6rWbzJ6YGnpaodE4yQ4sKWUdbcKy1PychA46IZ6yd3adY-opUDWHC1NQWLwjr9JS" alt="Clothing & Accessories" class="category-img">
+            </div>
+            <h3 class="category-title">Clothing &amp; Accessories</h3>
+            <p class="category-desc">Formal wear and accessories</p>
+            <span class="category-link-tag">BROWSE NOW &gt;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. AVAILABLE NOW (FEATURED RENTAL CARDS)
+         ====================================================================== -->
+    <section class="browse-section" id="browse-section">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="browse-header-row">
+          <div class="section-title-wrap">
+            <div class="section-accent-line"></div>
+            <h2 class="section-title">AVAILABLE NOW</h2>
+            <div class="section-accent-line"></div>
+          </div>
+          <a href="browse.html" class="view-all-link">VIEW ALL &gt;</a>
+        </div>
+
+        <!-- 8 Featured Rental Item Cards (4 columns x 2 rows) -->
+        <div class="items-grid" id="itemsGrid">
+          <!-- Item Card 1 -->
+          <article class="item-card" data-category="electronics">
+            <div class="item-media-wrap">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoZ2guLKmZi7kOD0vAnDoNknHXwvk1LqVkfMR-miMliLfldyO-ZmdGce-WcuiTSC3wkJFg4rlKnECc_X1zAeHaeiZ6MK75i4cyn4yxSzwLETM0eomsumD9AtV991RIo_BDO5I-a0yRHDZHjZZYdU4DGySiiwIBPkcfeP2X6lBKLckRAsMEsAXUrdmgcc45A72ofenDqoGpq355f-zt8akPUelb0E1Z--8hipHh4tkAW9q_E6X2-xjV" alt="Casio fx-991EX Scientific Calculator" class="item-img">
+              <span class="badge badge-available item-badge-top">AVAILABLE</span>
+            </div>
+            <div class="item-info">
+              <span class="item-category-tag">Electronics &amp; Calculators</span>
+              <h3 class="item-name">Casio fx-991EX Scientific Calculator</h3>
+              <div class="item-meta-row">
+                <span class="item-meta-item"><span class="material-symbols-outlined">check_circle</span> Like New</span>
+                <span class="item-meta-dot">•</span>
+                <span class="item-meta-item"><span class="material-symbols-outlined">location_on</span> Multan, Gulgasht</span>
+              </div>
+              <div class="item-dates-pill">
+                <span class="material-symbols-outlined">calendar_today</span>
+                <span>20 Oct - 30 Nov 2026</span>
+              </div>
+              <div class="item-divider"></div>
+              <div class="item-price-owner-row">
+                <div class="item-rate-wrap">
+                  <span class="item-price">Rs. 150</span>
+                  <span class="item-period">/ day</span>
+                </div>
+                <div class="item-owner-info" title="Listed by Zainab M.">
+                  <div class="owner-avatar">ZM</div>
+                  <span class="owner-name">Zainab M.</span>
+                </div>
+              </div>
+              <a href="item-details.html?id=1" class="btn btn-dark item-action-btn">
+                <span>VIEW DETAILS</span>
+                <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Item Card 2 -->
+          <article class="item-card" data-category="books">
+            <div class="item-media-wrap">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQcyxZq_Wh3YFKkvxNHFbOUbGL1zYq72pErKBNnVUVL5H3wXS8naSH7iPzMkp7h6pU1cIaRuZSyT7L65ogUJF0E0QFcXpRPlp6AlLnJLB8PUhQjLtL1QkBoxKEyxGdnAZjUKo_xJr1w4Eubl6Vutnlfn1RmFafUGnfcPTpkkWOuW4p_niCZ1bZJ2ZCtfO7lCeXqnx3dQw_WOv5dzT1_gP8iouXObOcxlYDs4nyb09js86AKrx1EfTz" alt="Engineering Drafting Set" class="item-img">
+              <span class="badge badge-available item-badge-top">AVAILABLE</span>
+            </div>
+            <div class="item-info">
+              <span class="item-category-tag">Books &amp; Study Material</span>
+              <h3 class="item-name">Engineering Drafting Set</h3>
+              <div class="item-meta-row">
+                <span class="item-meta-item"><span class="material-symbols-outlined">check_circle</span> Good</span>
+                <span class="item-meta-dot">•</span>
+                <span class="item-meta-item"><span class="material-symbols-outlined">location_on</span> Multan, Cantt</span>
+              </div>
+              <div class="item-dates-pill">
+                <span class="material-symbols-outlined">calendar_today</span>
+                <span>20 Oct - 30 Nov 2026</span>
+              </div>
+              <div class="item-divider"></div>
+              <div class="item-price-owner-row">
+                <div class="item-rate-wrap">
+                  <span class="item-price">Rs. 100</span>
+                  <span class="item-period">/ day</span>
+                </div>
+                <div class="item-owner-info" title="Listed by Ahmed K.">
+                  <div class="owner-avatar">AK</div>
+                  <span class="owner-name">Ahmed K.</span>
+                </div>
+              </div>
+              <a href="item-details.html?id=2" class="btn btn-dark item-action-btn">
+                <span>VIEW DETAILS</span>
+                <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Item Card 3 -->
+          <article class="item-card" data-category="tools">
+            <div class="item-media-wrap">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuADC0L6m46VqOCQO1RtPxrZyzPpCx0TfukMbK1GP3u-KN5VR2xITMKjypy9OFdfmVqtfZPaXmL8IU9coqVD3vfNLSt7aZym5ulsJAcJmpEjnrRnd0IAb2DbjZROicSODo90AAEGI_co_sD8nXT-qXOJYQkSb7ZzxNbm_-pnnv-0xncOtpRDKlt0q9JViV3t9nQ1o_TB6hD0hXyZVDxxlv6YBPgL1rWmTslq2PQJgOpP6hEYTjwANBRG" alt="DeWalt 20V Cordless Drill" class="item-img">
+              <span class="badge badge-available item-badge-top">AVAILABLE</span>
+            </div>
+            <div class="item-info">
+              <span class="item-category-tag">Tools &amp; Hardware</span>
+              <h3 class="item-name">DeWalt 20V Cordless Drill</h3>
+              <div class="item-meta-row">
+                <span class="item-meta-item"><span class="material-symbols-outlined">check_circle</span> Good</span>
+                <span class="item-meta-dot">•</span>
+                <span class="item-meta-item"><span class="material-symbols-outlined">location_on</span> Lahore, Johar Town</span>
+              </div>
+              <div class="item-dates-pill">
+                <span class="material-symbols-outlined">calendar_today</span>
+                <span>20 Oct - 30 Nov 2026</span>
+              </div>
+              <div class="item-divider"></div>
+              <div class="item-price-owner-row">
+                <div class="item-rate-wrap">
+                  <span class="item-price">Rs. 500</span>
+                  <span class="item-period">/ day</span>
+                </div>
+                <div class="item-owner-info" title="Listed by Hamza S.">
+                  <div class="owner-avatar">HS</div>
+                  <span class="owner-name">Hamza S.</span>
+                </div>
+              </div>
+              <a href="item-details.html?id=3" class="btn btn-dark item-action-btn">
+                <span>VIEW DETAILS</span>
+                <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Item Card 4 -->
+          <article class="item-card" data-category="kitchen">
+            <div class="item-media-wrap">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuArj8qduQdzMFslS1I0nJy59Nk-c1ywAOzFHR0_jlkkHRvwKzXRaTLkjGQohLcJO1MKO8x6tw6Z3csw3TCPCiXFeVXqNCbVL46oS36sxBE6EA1roX3uL2yqOTDQVhu5KwhH_eoRzz3JtFlHWozVuOgSZE5V-qwn_T_YPD5wA3bsuFhh-mE05R239zrHzMcDW6r9mRyby1_VFcdwtzKSFjJ990xKZzO3vnFixLsKRgIgNjf43VF9UoDs" alt="Electric Rice Cooker 1.8L" class="item-img">
+              <span class="badge badge-available item-badge-top">AVAILABLE</span>
+            </div>
+            <div class="item-info">
+              <span class="item-category-tag">Kitchen &amp; Home</span>
+              <h3 class="item-name">Electric Rice Cooker 1.8L</h3>
+              <div class="item-meta-row">
+                <span class="item-meta-item"><span class="material-symbols-outlined">check_circle</span> Like New</span>
+                <span class="item-meta-dot">•</span>
+                <span class="item-meta-item"><span class="material-symbols-outlined">location_on</span> Karachi, Gulshan</span>
+              </div>
+              <div class="item-dates-pill">
+                <span class="material-symbols-outlined">calendar_today</span>
+                <span>20 Oct - 30 Nov 2026</span>
+              </div>
+              <div class="item-divider"></div>
+              <div class="item-price-owner-row">
+                <div class="item-rate-wrap">
+                  <span class="item-price">Rs. 200</span>
+                  <span class="item-period">/ day</span>
+                </div>
+                <div class="item-owner-info" title="Listed by Fatima A.">
+                  <div class="owner-avatar">FA</div>
+                  <span class="owner-name">Fatima A.</span>
+                </div>
+              </div>
+              <a href="item-details.html?id=4" class="btn btn-dark item-action-btn">
+                <span>VIEW DETAILS</span>
+                <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Item Card 5 -->
+          <article class="item-card" data-category="books">
+            <div class="item-media-wrap">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLAYadKu0a4_XHq7UWkmAWs6kHZANEuCWQfTAOma-qC-NpV8BBRwdU6NanrfXgF9crM2HQTRgQm6aqyLiKo3G3Jl5WWmvA17wpE8iEjtoK4Khv9ml5Qbp92R06CVY_BgoNsBBqDOjdwY0GNzuszfTcnPhDkm4dWPOw7-Kyjj_eVzw1NSVsHqwxdaD1KqzaZJi3L5mkd-4oPD11RKxOdb3icMahsc-erAu3JIfEDA6KUj4atAYtNnjO" alt="Data Structures Textbook" class="item-img">
+              <span class="badge badge-available item-badge-top">AVAILABLE</span>
+            </div>
+            <div class="item-info">
+              <span class="item-category-tag">Books &amp; Study Material</span>
+              <h3 class="item-name">Data Structures Textbook</h3>
+              <div class="item-meta-row">
+                <span class="item-meta-item"><span class="material-symbols-outlined">check_circle</span> Fair</span>
+                <span class="item-meta-dot">•</span>
+                <span class="item-meta-item"><span class="material-symbols-outlined">location_on</span> Multan, Gulgasht</span>
+              </div>
+              <div class="item-dates-pill">
+                <span class="material-symbols-outlined">calendar_today</span>
+                <span>20 Oct - 30 Nov 2026</span>
+              </div>
+              <div class="item-divider"></div>
+              <div class="item-price-owner-row">
+                <div class="item-rate-wrap">
+                  <span class="item-price">Rs. 80</span>
+                  <span class="item-period">/ day</span>
+                </div>
+                <div class="item-owner-info" title="Listed by Bilal R.">
+                  <div class="owner-avatar">BR</div>
+                  <span class="owner-name">Bilal R.</span>
+                </div>
+              </div>
+              <a href="item-details.html?id=5" class="btn btn-dark item-action-btn">
+                <span>VIEW DETAILS</span>
+                <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Item Card 6 -->
+          <article class="item-card" data-category="outdoor">
+            <div class="item-media-wrap">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFpA8EGRZGkEU8Q4Nf-9FRe6YNLZIhnHRk87J-GhH-DZn8x80tJwJK5TEohawP-uxwJctgFe1xN3wA0HrCh2NACytmW1A4Ze6x-Ownjd4DSCGBGIFd2WjgXcwxc1hzXmSXEIsz1G5-psrbiGryxedBP-zwBvML5YgVO2e1DYQZINzZ9R6dYvXE8IvdG0AE9_0QdNxGKTEqCTKXj1dGI4wKY-AflULJ-JTMOV7w4IL_5b0DVk0_v6ZN" alt="4-Person Camping Tent" class="item-img">
+              <span class="badge badge-available item-badge-top">AVAILABLE</span>
+            </div>
+            <div class="item-info">
+              <span class="item-category-tag">Sports &amp; Outdoor</span>
+              <h3 class="item-name">4-Person Camping Tent</h3>
+              <div class="item-meta-row">
+                <span class="item-meta-item"><span class="material-symbols-outlined">check_circle</span> Good</span>
+                <span class="item-meta-dot">•</span>
+                <span class="item-meta-item"><span class="material-symbols-outlined">location_on</span> Islamabad, F-10</span>
+              </div>
+              <div class="item-dates-pill">
+                <span class="material-symbols-outlined">calendar_today</span>
+                <span>20 Oct - 30 Nov 2026</span>
+              </div>
+              <div class="item-divider"></div>
+              <div class="item-price-owner-row">
+                <div class="item-rate-wrap">
+                  <span class="item-price">Rs. 700</span>
+                  <span class="item-period">/ day</span>
+                </div>
+                <div class="item-owner-info" title="Listed by Usman T.">
+                  <div class="owner-avatar">UT</div>
+                  <span class="owner-name">Usman T.</span>
+                </div>
+              </div>
+              <a href="item-details.html?id=6" class="btn btn-dark item-action-btn">
+                <span>VIEW DETAILS</span>
+                <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Item Card 7 -->
+          <article class="item-card" data-category="electronics">
+            <div class="item-media-wrap">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWhz4qgE1Z7R7HZrmI5zURFscfto4M2b6IVxG5PxF2k34F42D3WUpShVXngXGfUP3P6Gb0Q7Kqdif_Se4uvD6XmZRZNQrhRFdE9MgJWK6dej9M9ZPoONIyvawEI16ukN9jTXpefXuweoqWWssYyVWYXQWDsU6HcacdvITORwf8R9NOZOyOArMwaEpZClUkKAtnJQIC6W0goFgVj90N6uDLEiDzXFCNrG26FhyXbm8ltOj0Vh2I-6_X" alt="Party Speaker 200W" class="item-img">
+              <span class="badge badge-available item-badge-top">AVAILABLE</span>
+            </div>
+            <div class="item-info">
+              <span class="item-category-tag">Electronics &amp; Calculators</span>
+              <h3 class="item-name">Party Speaker 200W</h3>
+              <div class="item-meta-row">
+                <span class="item-meta-item"><span class="material-symbols-outlined">check_circle</span> Good</span>
+                <span class="item-meta-dot">•</span>
+                <span class="item-meta-item"><span class="material-symbols-outlined">location_on</span> Lahore, DHA</span>
+              </div>
+              <div class="item-dates-pill">
+                <span class="material-symbols-outlined">calendar_today</span>
+                <span>20 Oct - 30 Nov 2026</span>
+              </div>
+              <div class="item-divider"></div>
+              <div class="item-price-owner-row">
+                <div class="item-rate-wrap">
+                  <span class="item-price">Rs. 600</span>
+                  <span class="item-period">/ day</span>
+                </div>
+                <div class="item-owner-info" title="Listed by Sana R.">
+                  <div class="owner-avatar">SR</div>
+                  <span class="owner-name">Sana R.</span>
+                </div>
+              </div>
+              <a href="item-details.html?id=7" class="btn btn-dark item-action-btn">
+                <span>VIEW DETAILS</span>
+                <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Item Card 8 -->
+          <article class="item-card" data-category="tools">
+            <div class="item-media-wrap">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8zRfgHYyZ8N7rk2dpffj2UfAKQtRs1p_Q7SEx4E3mHzB5qMcllcLmEr0ilU3RA4i_8a5Wvc1ZJIA38Bg0DTpLcGNsEzKWlkB3EroFbI6pfqhNEokaHsn6d1txtQLDEmItRCcxhp1l9JlweF-bTjBpNd6lgFn4vDnNkgsoP69sZtKipyxaZgGpMPzfWKUwv_qsBGl8Li430RpWiefZtDaKGF79S4KMucVx-uP75EyMaElVmwP410lA" alt="Aluminium Ladder 8ft" class="item-img">
+              <span class="badge badge-available item-badge-top">AVAILABLE</span>
+            </div>
+            <div class="item-info">
+              <span class="item-category-tag">Tools &amp; Hardware</span>
+              <h3 class="item-name">Aluminium Ladder 8ft</h3>
+              <div class="item-meta-row">
+                <span class="item-meta-item"><span class="material-symbols-outlined">check_circle</span> Good</span>
+                <span class="item-meta-dot">•</span>
+                <span class="item-meta-item"><span class="material-symbols-outlined">location_on</span> Rawalpindi, Bahria</span>
+              </div>
+              <div class="item-dates-pill">
+                <span class="material-symbols-outlined">calendar_today</span>
+                <span>20 Oct - 30 Nov 2026</span>
+              </div>
+              <div class="item-divider"></div>
+              <div class="item-price-owner-row">
+                <div class="item-rate-wrap">
+                  <span class="item-price">Rs. 300</span>
+                  <span class="item-period">/ day</span>
+                </div>
+                <div class="item-owner-info" title="Listed by Imran H.">
+                  <div class="owner-avatar">IH</div>
+                  <span class="owner-name">Imran H.</span>
+                </div>
+              </div>
+              <a href="item-details.html?id=8" class="btn btn-dark item-action-btn">
+                <span>VIEW DETAILS</span>
+                <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Dynamic Empty State (Shown when no items match search/filter) -->
+        <div class="empty-state" id="emptyState">
+          <div class="empty-state-icon-wrap">
+            <span class="material-symbols-outlined">search_off</span>
+          </div>
+          <h3 class="empty-state-title">NO ITEMS FOUND</h3>
+          <p class="empty-state-desc">Try a different keyword or reset your category filters to explore available equipment across Pakistan.</p>
+          <button type="button" class="btn btn-outline" id="resetFiltersBtn">CLEAR FILTERS</button>
+        </div>
+
+        <!-- Show More Items Button -->
+        <div class="browse-more-row">
+          <a href="browse.html" class="btn btn-outline">SHOW MORE ITEMS</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. TRUST STRIP
+         ====================================================================== -->
+    <section class="trust-strip" aria-label="Borrowly Platform Guarantees">
+      <div class="container">
+        <div class="trust-strip-grid">
+          <!-- Trust Item 1 -->
+          <div class="trust-strip-item">
+            <span class="material-symbols-outlined">verified</span>
+            <div>
+              <div class="trust-item-title">OWNER APPROVAL</div>
+              <div class="trust-item-desc">Nothing happens without a yes</div>
+            </div>
+          </div>
+
+          <!-- Trust Item 2 -->
+          <div class="trust-strip-item">
+            <span class="material-symbols-outlined">event_busy</span>
+            <div>
+              <div class="trust-item-title">NO DOUBLE BOOKINGS</div>
+              <div class="trust-item-desc">Dates never overlap</div>
+            </div>
+          </div>
+
+          <!-- Trust Item 3 -->
+          <div class="trust-strip-item">
+            <span class="material-symbols-outlined">payments</span>
+            <div>
+              <div class="trust-item-title">PAY THE OWNER DIRECTLY</div>
+              <div class="trust-item-desc">Cash or transfer on pickup</div>
+            </div>
+          </div>
+
+          <!-- Trust Item 4 -->
+          <div class="trust-strip-item">
+            <span class="material-symbols-outlined">shield</span>
+            <div>
+              <div class="trust-item-title">GENERAL LOCATIONS ONLY</div>
+              <div class="trust-item-desc">Your home address stays private</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         7. HOW IT WORKS & FAQ SECTION
+         ====================================================================== -->
+    <section class="how-faq-section" id="how-it-works">
+      <div class="container">
+        <div class="how-faq-grid">
+          <!-- Left Column: How It Works 4-Step Cards -->
+          <div class="how-col">
+            <div class="how-header">
+              <h2 class="section-title" style="text-align: left;">HOW IT WORKS</h2>
+              <div class="section-accent-line"></div>
+            </div>
+
+            <div class="steps-grid">
+              <!-- Step 1 -->
+              <div class="step-card">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGsbYw88IiSLyV-HHqdSw4CVC-1RjUzaRnCk-v-RgTCrXVEryYOoTEJRsd-KsSKK6DtEXxSkkwFQlv0DdsHv2ac58PmDYBDoCOPJ1Stcno43b-SIntZxacrZ1vjz3EwaUCg0Tk7t2OufBAIHLYJmUqRYCmQ0fZKN8jaCsu_VSvpPp0DKGPVtppX19pDoZEa-wAZA98v3MOL3KubbSAFrizMz4rcYrJbDlJPUwVZLOE99iDuPRbAVfV" alt="List an item on Borrowly" class="step-img">
+                <div class="step-overlay"></div>
+                <div class="step-number">01</div>
+                <div class="step-content">
+                  <div class="step-title">LIST AN ITEM</div>
+                  <div class="step-desc">Add a photo, details, and your daily price</div>
+                </div>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="step-card">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1aYNWFnIYQuZ2V5WBwPfrS2-X5Zvg5DDdPySnDjyK9uyQ-_aACAGeJh8oBLvs2nC800PFd0hSef4MKDtk77p3Xr_wl0-JW9HAkU-5PvOrel9g8kLEXqKG843d0Wtd_cfa0bbiQw40FeFqNTpHwnY064bcvBwciDIeQxGonBcmycPPnkuVZ80Iz7RKAleurewtrjvs-PbN4ahqMQ6ZjvSTzCfaiY90AwJI6UGdnQyGdfxsLxRvhI_P" alt="Select rental dates" class="step-img">
+                <div class="step-overlay"></div>
+                <div class="step-number">02</div>
+                <div class="step-content">
+                  <div class="step-title">REQUEST DATES</div>
+                  <div class="step-desc">Choose your needed start and end date</div>
+                </div>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="step-card">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7d2bJGkYc5gbYML4bLIxCAXj86snDA-5KbEiJbp39v_lkZSCUwLYVKyBjOXxyjf3Sct7-j-uhH-8gH_AnsOPyHhHevMlzU9qn-rlgU22QD9T_BUgKfKnX0kDkdPBYr915kG21XZnQ1zs5Wu50bz3m5iGnj21MUszsM3px1YK238J4OoHGIYrHEkyQhB6dBGlYtLW1-mQti8CI0SBEYyNdC1Wa-boHQnYNoe597Qb16OrRnbh8Cn6l" alt="Owner approval" class="step-img">
+                <div class="step-overlay"></div>
+                <div class="step-number">03</div>
+                <div class="step-content">
+                  <div class="step-title">OWNER APPROVES</div>
+                  <div class="step-desc">Review and approve every reservation</div>
+                </div>
+              </div>
+
+              <!-- Step 4 -->
+              <div class="step-card">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgBBcUWg5x9vP6zm8pyBIBcbKQQb4EDxrH9HzZCMIaaAMVp__ChJ-VxBufqTWpMhON5kXdVX-su5-eekVvW7xsPglj8hMwHcaOUBNc86T9BqXwsF5CWpMWtQncBXJiVRJoB6qINkC3fwYV27_CY61TYhlq_LzFT5VZR0XI6cHdYbEmdeW2Au8-6BhvvdHyYR-Odjpn8OT6-xS9cDgrMV-En7IE2YOFDRDt8RGwPUOlJtJ1zqxJnKEE" alt="Peer handoff" class="step-img">
+                <div class="step-overlay"></div>
+                <div class="step-number">04</div>
+                <div class="step-content">
+                  <div class="step-title">SETTLE DIRECTLY</div>
+                  <div class="step-desc">Coordinate pickup and pay the owner</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: FAQ Accordion Card -->
+          <div class="faq-col">
+            <div class="faq-box">
+              <div>
+                <h3 class="faq-title">FREQUENTLY ASKED QUESTIONS</h3>
+                <div class="faq-list">
+                  <!-- FAQ 1 (Active by default) -->
+                  <div class="faq-item active">
+                    <button type="button" class="faq-trigger" aria-expanded="true">
+                      <span>Is Borrowly free to join?</span>
+                      <span class="material-symbols-outlined faq-icon">remove</span>
+                    </button>
+                    <div class="faq-answer">
+                      Yes. Creating an account is completely free. Owners set their own daily rental prices for each item.
+                    </div>
+                  </div>
+
+                  <!-- FAQ 2 -->
+                  <div class="faq-item">
+                    <button type="button" class="faq-trigger" aria-expanded="false">
+                      <span>How do I pay?</span>
+                      <span class="material-symbols-outlined faq-icon">add</span>
+                    </button>
+                    <div class="faq-answer">
+                      You pay the owner directly via cash on pickup or direct bank transfer upon receiving their confirmed contact details.
+                    </div>
+                  </div>
+
+                  <!-- FAQ 3 -->
+                  <div class="faq-item">
+                    <button type="button" class="faq-trigger" aria-expanded="false">
+                      <span>What if two people want the same dates?</span>
+                      <span class="material-symbols-outlined faq-icon">add</span>
+                    </button>
+                    <div class="faq-answer">
+                      Once an owner approves a booking for specific dates, the calendar automatically locks those dates to eliminate double bookings.
+                    </div>
+                  </div>
+
+                  <!-- FAQ 4 -->
+                  <div class="faq-item">
+                    <button type="button" class="faq-trigger" aria-expanded="false">
+                      <span>Can anyone list an item?</span>
+                      <span class="material-symbols-outlined faq-icon">add</span>
+                    </button>
+                    <div class="faq-answer">
+                      Yes! Any registered community member with an account can list utility gear, study material, tools, or appliances.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Footer Note -->
+              <div class="faq-footer">
+                <span style="color: var(--color-text-muted);">Have more questions?</span>
+                <a href="#how-it-works" class="faq-footer-link">LEARN MORE &gt;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         8. OWNER CTA BANNER
+         ====================================================================== -->
+    <section class="owner-cta-section" aria-label="Start earning as an owner">
+      <div class="container owner-cta-container">
+        <!-- Left Side: Icon & Headline -->
+        <div class="owner-cta-left">
+          <div class="owner-cta-icon-circle">
+            <span class="material-symbols-outlined">key</span>
+          </div>
+          <div>
+            <h2 class="owner-cta-heading">GOT SOMETHING SITTING IDLE?</h2>
+            <p class="owner-cta-desc">List it in minutes and set your own daily price.</p>
+          </div>
+        </div>
+
+        <!-- Right Side: CTA Button -->
+        <div>
+          <a href="list-item.html" class="btn owner-cta-btn">LIST AN ITEM</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       9. SHARED FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main-grid">
+        <!-- Brand Description Column -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-link" aria-label="Borrowly Home">
+            <img src="stitch_borrowly_peer_rental_marketplace/screenshot_2026_10_19_005657.png/screen.png" alt="Borrowly" class="brand-logo-img">
+          </a>
+          <p class="footer-brand-desc">
+            Open peer-to-peer rental marketplace across Pakistan. Rent everyday items directly from owners in your city for affordable daily rates.
+          </p>
+        </div>
+
+        <!-- Categories Column -->
+        <div>
+          <h3 class="footer-col-title">Categories</h3>
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><a href="browse.html?category=electronics">Electronics &amp; Cameras</a></li>
+            <li class="footer-nav-item"><a href="browse.html?category=tools">Power Tools &amp; Equipment</a></li>
+            <li class="footer-nav-item"><a href="browse.html?category=outdoor">Sports &amp; Outdoor Gear</a></li>
+            <li class="footer-nav-item"><a href="browse.html?category=books">Academic &amp; Books</a></li>
+          </ul>
+        </div>
+
+        <!-- Platform Links Column -->
+        <div>
+          <h3 class="footer-col-title">Platform</h3>
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><a href="#how-it-works">How It Works</a></li>
+            <li class="footer-nav-item"><a href="browse.html">Browse Rentals</a></li>
+            <li class="footer-nav-item"><a href="list-item.html">List an Item</a></li>
+            <li class="footer-nav-item"><a href="dashboard.html">Owner Dashboard</a></li>
+          </ul>
+        </div>
+
+        <!-- Rental Rules Column -->
+        <div>
+          <h3 class="footer-col-title">Rental Rules</h3>
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><span>Owner Approvals</span></li>
+            <li class="footer-nav-item"><span>No Double Bookings</span></li>
+            <li class="footer-nav-item"><span>Direct Peer Handoff</span></li>
+            <li class="footer-nav-item"><span>General Locations Only</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar: Copyright & Pakistani Cities -->
+      <div class="footer-bottom-row">
+        <p>&copy; 2026 Borrowly. All rights reserved.</p>
+        <div class="footer-cities-row">
+          <span class="city-pill">Lahore</span>
+          <span class="city-pill">Karachi</span>
+          <span class="city-pill">Islamabad</span>
+          <span class="city-pill">Rawalpindi</span>
+          <span class="city-pill">Multan</span>
+          <span class="city-pill">Peshawar</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

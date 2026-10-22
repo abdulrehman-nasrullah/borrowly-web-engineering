@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create your free Borrowly account to rent everyday items or earn from gear you rarely use across Pakistan.">
+  <title>Register — Borrowly</title>
+
+  <!-- Google Fonts: Barlow Condensed (Headings/Prices) & Inter (Body/UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;1,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Google Material Symbols Outlined -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+
+  <!-- Plain CSS3 Global & Auth Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. SHARED HEADER & NAVIGATION
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container header-container">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-link" aria-label="Borrowly Home">
+        <img src="stitch_borrowly_peer_rental_marketplace/screenshot_2026_10_19_005657.png/screen.png" alt="Borrowly" class="brand-logo-img">
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <a href="browse.html" class="nav-link">BROWSE RENTALS</a>
+        <a href="index.html#how-it-works" class="nav-link">HOW IT WORKS</a>
+        <a href="index.html#categories" class="nav-link">CATEGORIES</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <div class="header-search">
+          <span class="material-symbols-outlined">search</span>
+          <input type="text" class="header-search-input" placeholder="Search gear in Karachi, Lahore..." aria-label="Search items">
+        </div>
+
+        <a href="login.html" class="nav-link" style="font-size: 1.125rem;">LOG IN</a>
+
+        <a href="list-item.html" class="btn btn-primary">LIST AN ITEM</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       MAIN CONTENT: TWO-COLUMN REGISTRATION LAYOUT
+       ======================================================================== -->
+  <main class="main-content">
+    <div class="auth-layout">
+
+      <!-- ====================================================================
+           LEFT COLUMN: DARK BRANDED SHOWCASE PANEL (Desktop)
+           ==================================================================== -->
+      <section class="auth-showcase" aria-label="Borrowly Registration Benefits">
+        <!-- Subtle Ambient Lighting & Industrial Geometric Texture -->
+        <div class="auth-ambient-glow"></div>
+        <div class="auth-texture-overlay"></div>
+
+        <!-- Top Eyebrow -->
+        <div class="auth-eyebrow">
+          <span class="hero-dot"></span>
+          <span class="hero-eyebrow-text">CREATE YOUR ACCOUNT</span>
+        </div>
+
+        <!-- Center Editorial Statement & Community Benefits -->
+        <div class="auth-showcase-content">
+          <h1 class="auth-headline">
+            <span class="auth-headline-light">JOIN</span>
+            <span class="auth-headline-accent">BORROWLY.</span>
+          </h1>
+
+          <p class="auth-subtext">
+            One account to rent items out and borrow from others. Open to everyone across Karachi, Lahore, and Islamabad.
+          </p>
+
+          <ul class="auth-checklist">
+            <li class="auth-checklist-item">
+              <span class="auth-check-icon">
+                <span class="material-symbols-outlined">check</span>
+              </span>
+              <span>List items and set your own daily price</span>
+            </li>
+            <li class="auth-checklist-item">
+              <span class="auth-check-icon">
+                <span class="material-symbols-outlined">check</span>
+              </span>
+              <span>Request dates in minutes</span>
+            </li>
+            <li class="auth-checklist-item">
+              <span class="auth-check-icon">
+                <span class="material-symbols-outlined">check</span>
+              </span>
+              <span>Owners approve every reservation</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Bottom Trust Badges -->
+        <div class="auth-trust-strip">
+          <div class="auth-trust-badge">
+            <span class="material-symbols-outlined">verified</span>
+            <span>Direct Peer Handoff</span>
+          </div>
+          <div class="auth-trust-badge">
+            <span class="material-symbols-outlined">event_available</span>
+            <span>Owner Approved Dates</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           RIGHT COLUMN: REGISTRATION FORM CANVAS
+           ==================================================================== -->
+      <section class="auth-canvas" aria-label="Registration Form">
+        <div class="auth-wrapper" style="max-width: 480px;">
+
+          <!-- Mobile Only Eyebrow & Headline -->
+          <div class="auth-mobile-header">
+            <span class="hero-eyebrow-text">REGISTER</span>
+            <h2 class="section-title" style="margin-top: 0.25rem;">JOIN BORROWLY</h2>
+          </div>
+
+          <!-- White Tactical Registration Card -->
+          <div class="auth-card">
+            <!-- Card Header -->
+            <div class="auth-card-header">
+              <h2 class="auth-card-title">CREATE ACCOUNT</h2>
+              <span class="auth-card-badge">FREE ACCESS</span>
+            </div>
+
+            <!-- Registration Form -->
+            <form class="auth-form" action="#" method="POST">
+              <!-- Full Name Field -->
+              <div class="auth-field">
+                <label for="register-name" class="auth-label">FULL NAME</label>
+                <input
+                  type="text"
+                  id="register-name"
+                  name="fullname"
+                  class="auth-input"
+                  placeholder="e.g. Zainab Malik"
+                  autocomplete="name"
+                  required
+                >
+              </div>
+
+              <!-- Email Address Field -->
+              <div class="auth-field">
+                <label for="register-email" class="auth-label">EMAIL ADDRESS</label>
+                <input
+                  type="email"
+                  id="register-email"
+                  name="email"
+                  class="auth-input"
+                  placeholder="name@example.com"
+                  autocomplete="email"
+                  required
+                >
+              </div>
+
+              <!-- Password Field -->
+              <div class="auth-field">
+                <div class="auth-label-row">
+                  <label for="register-password" class="auth-label">PASSWORD</label>
+                  <span class="auth-hint">At least 8 characters</span>
+                </div>
+                <input
+                  type="password"
+                  id="register-password"
+                  name="password"
+                  class="auth-input"
+                  placeholder="••••••••••••"
+                  minlength="8"
+                  autocomplete="new-password"
+                  required
+                >
+              </div>
+
+              <!-- Confirm Password Field -->
+              <div class="auth-field">
+                <label for="register-confirm-password" class="auth-label">CONFIRM PASSWORD</label>
+                <input
+                  type="password"
+                  id="register-confirm-password"
+                  name="confirm_password"
+                  class="auth-input"
+                  placeholder="Repeat password"
+                  minlength="8"
+                  autocomplete="new-password"
+                  required
+                >
+              </div>
+
+              <!-- Primary Submit Button -->
+              <button type="submit" class="btn btn-primary auth-submit-btn">
+                <span>REGISTER</span>
+                <span class="material-symbols-outlined" style="font-size: 1.125rem;">arrow_forward</span>
+              </button>
+            </form>
+
+            <!-- Card Footer Switcher Link -->
+            <div class="auth-card-footer">
+              <span>Already registered?</span>
+              <a href="login.html" class="auth-switch-link">Log in</a>
+            </div>
+          </div>
+
+          <!-- Pakistan Marketplace Community Protocol Note -->
+          <div class="auth-note">
+            <span class="material-symbols-outlined">location_on</span>
+            <span>Direct community rentals across Karachi, Lahore, Islamabad, Multan &amp; Peshawar</span>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ========================================================================
+       2. SHARED FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main-grid">
+        <!-- Brand Description Column -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-link" aria-label="Borrowly Home">
+            <img src="stitch_borrowly_peer_rental_marketplace/screenshot_2026_10_19_005657.png/screen.png" alt="Borrowly" class="brand-logo-img">
+          </a>
+          <p class="footer-brand-desc">
+            Open peer-to-peer rental marketplace across Pakistan. Rent everyday items directly from owners in your city for affordable daily rates.
+          </p>
+        </div>
+
+        <!-- Categories Column -->
+        <div>
+          <h3 class="footer-col-title">Categories</h3>
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><a href="browse.html?category=electronics">Electronics &amp; Cameras</a></li>
+            <li class="footer-nav-item"><a href="browse.html?category=tools">Power Tools &amp; Equipment</a></li>
+            <li class="footer-nav-item"><a href="browse.html?category=outdoor">Sports &amp; Outdoor Gear</a></li>
+            <li class="footer-nav-item"><a href="browse.html?category=books">Academic &amp; Books</a></li>
+          </ul>
+        </div>
+
+        <!-- Platform Links Column -->
+        <div>
+          <h3 class="footer-col-title">Platform</h3>
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><a href="index.html#how-it-works">How It Works</a></li>
+            <li class="footer-nav-item"><a href="browse.html">Browse Rentals</a></li>
+            <li class="footer-nav-item"><a href="list-item.html">List an Item</a></li>
+            <li class="footer-nav-item"><a href="dashboard.html">Owner Dashboard</a></li>
+          </ul>
+        </div>
+
+        <!-- Rental Rules Column -->
+        <div>
+          <h3 class="footer-col-title">Rental Rules</h3>
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><span>Owner Approvals</span></li>
+            <li class="footer-nav-item"><span>No Double Bookings</span></li>
+            <li class="footer-nav-item"><span>Direct Peer Handoff</span></li>
+            <li class="footer-nav-item"><span>General Locations Only</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar: Copyright & Pakistani Cities -->
+      <div class="footer-bottom-row">
+        <p>&copy; 2026 Borrowly. All rights reserved.</p>
+        <div class="footer-cities-row">
+          <span class="city-pill">Lahore</span>
+          <span class="city-pill">Karachi</span>
+          <span class="city-pill">Islamabad</span>
+          <span class="city-pill">Rawalpindi</span>
+          <span class="city-pill">Multan</span>
+          <span class="city-pill">Peshawar</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

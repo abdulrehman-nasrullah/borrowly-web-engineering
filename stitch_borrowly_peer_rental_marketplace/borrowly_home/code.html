@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;1,800&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"background":"#fbf8fc","surface-variant":"#e4e1e5","surface-container-lowest":"#ffffff","error-container":"#ffdad6","primary":"#ae0011","inverse-on-surface":"#f3f0f4","on-tertiary-fixed":"#1b1b1e","surface-tint":"#c00014","inverse-surface":"#303033","surface-container-high":"#eae7eb","surface-dim":"#dcd9dd","on-primary-fixed-variant":"#93000d","surface":"#fbf8fc","primary-fixed-dim":"#ffb4ab","on-secondary":"#ffffff","inverse-primary":"#ffb4ab","on-primary-fixed":"#410002","primary-fixed":"#ffdad6","secondary-fixed":"#e5e2e3","surface-container-highest":"#e4e1e5","surface-container":"#f0edf1","on-surface":"#1b1b1e","on-tertiary-fixed-variant":"#47464a","on-primary":"#ffffff","on-tertiary-container":"#f2eff3","on-primary-container":"#ffece9","surface-container-low":"#f5f3f6","on-error-container":"#93000a","primary-container":"#d71920","on-tertiary":"#ffffff","tertiary-container":"#6d6c70","error":"#ba1a1a","on-secondary-fixed-variant":"#474647","on-secondary-fixed":"#1c1b1c","tertiary-fixed":"#e4e1e6","surface-bright":"#fbf8fc","on-background":"#1b1b1e","outline":"#926f6b","on-error":"#ffffff","secondary":"#5f5e5f","outline-variant":"#e6bdb8","on-surface-variant":"#5d3f3c","secondary-container":"#e5e2e3","secondary-fixed-dim":"#c8c6c7","tertiary-fixed-dim":"#c8c5ca","on-secondary-container":"#656465","tertiary":"#555458"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-md":"1rem","space-sm":"0.5rem","space-xs":"0.25rem","space-lg":"1.5rem","margin-desktop":"4rem","margin-tablet":"2rem","gutter-desktop":"1.5rem","space-xl":"2.5rem","gutter":"1rem","margin":"1rem"},"fontFamily":{"label-xs":["Inter"],"headline-md":["Barlow Condensed"],"price-display":["Barlow Condensed"],"display-hero-mobile":["Barlow Condensed"],"display-hero":["Barlow Condensed"],"body-lg":["Inter"],"headline-lg-mobile":["Barlow Condensed"],"body-md":["Inter"],"headline-lg":["Barlow Condensed"],"label-lg":["Inter"],"body-sm":["Inter"],"headline-sm":["Barlow Condensed"],"label-md":["Inter"]},"fontSize":{"label-xs":["10px",{"lineHeight":"12px","letterSpacing":"0.06em","fontWeight":"700"}],"headline-md":["24px",{"lineHeight":"28px","letterSpacing":"0.02em","fontWeight":"800"}],"price-display":["26px",{"lineHeight":"26px","letterSpacing":"0.01em","fontWeight":"800"}],"display-hero-mobile":["38px",{"lineHeight":"40px","letterSpacing":"0.02em","fontWeight":"800"}],"display-hero":["56px",{"lineHeight":"58px","letterSpacing":"0.02em","fontWeight":"800"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0","fontWeight":"400"}],"headline-lg-mobile":["28px",{"lineHeight":"30px","letterSpacing":"0.03em","fontWeight":"800"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0","fontWeight":"400"}],"headline-lg":["36px",{"lineHeight":"38px","letterSpacing":"0.03em","fontWeight":"800"}],"label-lg":["14px",{"lineHeight":"18px","letterSpacing":"0.02em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"headline-sm":["20px",{"lineHeight":"24px","letterSpacing":"0.02em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"600"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 w-full z-50 bg-[#0B0B0C] border-b border-[#27272A]"><div class="h-16 max-w-[1280px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop flex items-center justify-between gap-gutter"><div class="flex items-center shrink-0"><a class="block" data-path="browse-rentals" href="#"><img alt="Borrowly" class="h-7 md:h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WI7tDpapJIIa7X-w_Zn9QvOk2m20WKLFCs7L7ACnZ9Sn5sxFVrKoBAfERpO-PVJibpfQDg1OJp8sLv0XlpnKQ9yb9hcEHUhfpBBbfsahSzYiHI2Nvw5X3Sh1rpgWyBI3Af3EHAX0hRLvyRH3FxErSzxZAdRjEY3JrU3inkfrVmmaVSruZZP9LnkZ3rGdBPUnAb7fDPjdkKDKD1QhkUHeeJgQ8npXl0gAYmrDR1Yin0I6HPwR105Oun66KVXCYTQu_5FG689I7uYA"/></a></div><nav class="hidden lg:flex items-center gap-space-lg" data-active-classes="text-on-primary font-bold"><a aria-current="page" class="uppercase tracking-wide transition-colors text-on-primary font-bold" data-path="browse-rentals" href="#">BROWSE RENTALS</a><a class="font-headline-sm text-headline-sm uppercase tracking-wide text-secondary-fixed-dim hover:text-on-secondary transition-colors" data-path="how-it-works" href="#">HOW IT WORKS</a><a class="font-headline-sm text-headline-sm uppercase tracking-wide text-secondary-fixed-dim hover:text-on-secondary transition-colors" data-path="categories" href="#">CATEGORIES</a></nav><div class="flex items-center gap-space-sm md:gap-space-md"><div class="hidden sm:flex items-center bg-[#18181B] border border-[#27272A] rounded-lg px-3 py-1.5 focus-within:border-primary-container"><span class="material-symbols-outlined text-secondary-fixed-dim text-sm mr-2">search</span><input class="bg-transparent border-0 outline-none text-on-surface-variant text-body-sm placeholder:text-secondary focus:ring-0 w-40 md:w-56 text-inverse-on-surface" placeholder="Search gear in Karachi, Lahore..." type="text"/></div><a class="h-11 px-4 bg-primary-container hover:bg-[#B5121A] text-on-primary font-label-lg text-label-lg uppercase rounded-lg border border-primary-container flex items-center justify-center transition-colors" data-path="list-item" href="#">LIST AN ITEM</a><div class="flex items-center pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-[#27272A]" src="https://lh3.googleusercontent.com/aida/AEtjO1WI7tDpapJIIa7X-w_Zn9QvOk2m20WKLFCs7L7ACnZ9Sn5sxFVrKoBAfERpO-PVJibpfQDg1OJp8sLv0XlpnKQ9yb9hcEHUhfpBBbfsahSzYiHI2Nvw5X3Sh1rpgWyBI3Af3EHAX0hRLvyRH3FxErSzxZAdRjEY3JrU3inkfrVmmaVSruZZP9LnkZ3rGdBPUnAb7fDPjdkKDKD1QhkUHeeJgQ8npXl0gAYmrDR1Yin0I6HPwR105Oun66KVXCYTQu_5FG689I7uYA"/></div></div></div></header><main class="w-full pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- 1) HERO SECTION -->
+<section class="relative w-full h-[520px] md:h-[520px] bg-[#0B0B0C] overflow-hidden">
+<!-- Hero Image Container (Right 55%) -->
+<div class="absolute top-0 right-0 w-full lg:w-[55%] h-full z-0">
+<img alt="Borrowly everyday rental utility equipment studio composition" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH0f0XbCydUh9LAeQHgM5vjDZXu7HLrc0Gaxya6nrWakoAeTp_1efe2E0yfU_bIRHzn3hSVmTPFzmYxogGd9DwQzv6CqWNHG30ePldZuKEFKkJ_B_PNTl8R3A1EMNJxz5SOU6WPKYM6liY5jr0hNoBo7SHjIAEbmm3kJLumKy0IKEmmSprLBnhJNGAT60fVZMwkSC80bIOLmRhIrL7KCxL0ER5FLf1WC00xub8Ofx9RvHh6YJunVG_"/>
+<!-- Smooth left-to-right black gradient overlay -->
+<div class="absolute inset-0 bg-gradient-to-r from-[#0B0B0C] via-[#0B0B0C]/80 lg:via-[#0B0B0C]/90 via-40% to-transparent pointer-events-none"></div>
+</div>
+<!-- Hero Content (Left 560px max width) -->
+<div class="relative z-10 max-w-[1280px] h-full mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop flex items-center">
+<div class="w-full max-w-[560px] flex flex-col justify-center">
+<!-- Eyebrow -->
+<div class="flex items-center gap-2 mb-4">
+<span class="w-2 h-2 rounded-full bg-[#EF3340] shrink-0"></span>
+<span class="text-[12px] font-semibold tracking-[0.12em] uppercase text-[#EF3340]">PAKISTAN'S COMMUNITY RENTAL MARKETPLACE</span>
+</div>
+<!-- H1 Headline -->
+<h1 class="font-headline-lg uppercase text-[68px] lg:text-[96px] leading-[68px] lg:leading-[92px] font-extrabold tracking-tight mb-6">
+<span class="block text-white">BORROW WHAT</span>
+<span class="block text-[#EF3340]">YOU NEED.</span>
+</h1>
+<!-- Subtext -->
+<p class="font-body-lg text-body-lg text-[#D4D4D8] max-w-[520px] leading-relaxed mb-8">
+          Rent everyday items from people near you for a small daily price, or earn from what you rarely use.
+        </p>
+<!-- Trust Row -->
+<div class="grid grid-cols-3 gap-4 mb-8 max-w-[500px]">
+<!-- Item 1 -->
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[#EF3340] text-[24px] shrink-0">sell</span>
+<div>
+<div class="text-[13px] font-bold text-white leading-tight">Daily prices</div>
+<div class="text-[12px] text-[#A1A1AA] leading-snug">Set by owners</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[#EF3340] text-[24px] shrink-0">verified_user</span>
+<div>
+<div class="text-[13px] font-bold text-white leading-tight">Owner approved</div>
+<div class="text-[12px] text-[#A1A1AA] leading-snug">Every request</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[#EF3340] text-[24px] shrink-0">location_on</span>
+<div>
+<div class="text-[13px] font-bold text-white leading-tight">Local pickup</div>
+<div class="text-[12px] text-[#A1A1AA] leading-snug">Near you</div>
+</div>
+</div>
+</div>
+<!-- CTA Row -->
+<div class="flex items-center flex-wrap gap-y-3">
+<a class="h-14 px-8 bg-primary-container hover:bg-[#B5121A] text-on-primary font-bold text-[14px] uppercase tracking-[0.06em] rounded-[4px] inline-flex items-center justify-center gap-2 transition-colors" href="#browse-section">
+<span>BROWSE ITEMS</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="text-[14px] font-bold uppercase text-white hover:text-red-400 ml-6 flex items-center transition-colors" href="#">
+            LIST AN ITEM &gt;
+          </a>
+</div>
+</div>
+</div>
+</section>
+<!-- 2) SEARCH PANEL -->
+<section class="relative z-20 max-w-[1280px] w-full mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop -mt-10">
+<div class="w-full bg-white rounded-[12px] p-5 shadow-xl border border-[#E4E4E7]">
+<!-- Top Row -->
+<div class="flex flex-col md:flex-row items-center gap-4">
+<!-- Search Input -->
+<div class="relative flex-[2] w-full">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-secondary text-[20px]">search</span>
+<input class="w-full h-14 pl-12 pr-4 bg-white border border-[#D4D4D8] rounded-[6px] text-[15px] text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container focus:border-primary-container transition-all" id="searchInput" placeholder="Try 'Cordless drill' or 'Casio calculator'" type="text"/>
+</div>
+<!-- Category Dropdown -->
+<div class="relative flex-1 w-full">
+<select class="w-full h-14 px-4 bg-white border border-[#D4D4D8] rounded-[6px] text-[14px] font-semibold text-on-surface appearance-none focus:outline-none focus:ring-2 focus:ring-primary-container focus:border-primary-container cursor-pointer transition-all" id="categorySelect">
+<option value="all">All categories</option>
+<option value="electronics">Electronics &amp; Calculators</option>
+<option value="books">Books &amp; Study Material</option>
+<option value="tools">Tools &amp; Hardware</option>
+<option value="kitchen">Kitchen &amp; Home</option>
+<option value="outdoor">Sports &amp; Outdoor</option>
+<option value="clothing">Clothing &amp; Accessories</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-secondary text-[20px]">expand_more</span>
+</div>
+<!-- Red Search Button -->
+<button class="w-full md:w-auto h-14 min-w-[160px] bg-primary-container hover:bg-[#B5121A] text-white uppercase text-[14px] font-bold tracking-[0.06em] rounded-[4px] flex items-center justify-center gap-1.5 transition-colors" type="button">
+<span>SEARCH</span>
+</button>
+</div>
+<!-- Bottom Row: Quick-Pick Chips -->
+<div class="mt-4 flex items-center gap-2 overflow-x-auto no-scrollbar pt-1">
+<button class="chip-filter active-chip h-9 px-4 rounded-full text-[13px] font-semibold whitespace-nowrap bg-primary-container text-white transition-colors" data-category="all" type="button">
+          All
+        </button>
+<button class="chip-filter h-9 px-4 rounded-full text-[13px] font-semibold whitespace-nowrap bg-[#F4F4F5] text-[#52525B] hover:bg-zinc-200 transition-colors" data-category="electronics" type="button">
+          Electronics
+        </button>
+<button class="chip-filter h-9 px-4 rounded-full text-[13px] font-semibold whitespace-nowrap bg-[#F4F4F5] text-[#52525B] hover:bg-zinc-200 transition-colors" data-category="books" type="button">
+          Books
+        </button>
+<button class="chip-filter h-9 px-4 rounded-full text-[13px] font-semibold whitespace-nowrap bg-[#F4F4F5] text-[#52525B] hover:bg-zinc-200 transition-colors" data-category="tools" type="button">
+          Tools
+        </button>
+<button class="chip-filter h-9 px-4 rounded-full text-[13px] font-semibold whitespace-nowrap bg-[#F4F4F5] text-[#52525B] hover:bg-zinc-200 transition-colors" data-category="kitchen" type="button">
+          Kitchen
+        </button>
+<button class="chip-filter h-9 px-4 rounded-full text-[13px] font-semibold whitespace-nowrap bg-[#F4F4F5] text-[#52525B] hover:bg-zinc-200 transition-colors" data-category="outdoor" type="button">
+          Outdoor
+        </button>
+<button class="chip-filter h-9 px-4 rounded-full text-[13px] font-semibold whitespace-nowrap bg-[#F4F4F5] text-[#52525B] hover:bg-zinc-200 transition-colors" data-category="clothing" type="button">
+          Clothing
+        </button>
+<button class="chip-filter h-9 px-4 rounded-full text-[13px] font-semibold whitespace-nowrap bg-[#F4F4F5] text-[#52525B] hover:bg-zinc-200 transition-colors" data-category="other" type="button">
+          Other
+        </button>
+</div>
+</div>
+</section>
+<!-- 3) BROWSE BY CATEGORY -->
+<section class="w-full bg-[#F4F4F5] pt-24 pb-16">
+<div class="max-w-[1280px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop">
+<!-- Section Title Component -->
+<div class="flex items-center justify-center gap-4">
+<div class="w-12 h-[2px] bg-primary-container"></div>
+<h2 class="font-headline-lg uppercase text-[32px] font-extrabold tracking-wide text-on-surface">BROWSE BY CATEGORY</h2>
+<div class="w-12 h-[2px] bg-primary-container"></div>
+</div>
+<!-- 6 Category Tiles Row -->
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 mt-10">
+<!-- Tile 1 -->
+<a class="group flex flex-col bg-white rounded-[8px] border border-[#E4E4E7] overflow-hidden p-3 hover:-translate-y-1 hover:border-primary-container transition-all" href="#browse-section">
+<div class="w-full aspect-[16/10] rounded-[4px] overflow-hidden bg-zinc-100 mb-3">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A clean studio composition of a black scientific calculator, digital camera bodies, and clean audio cables on a neutral studio grey background under balanced soft studio light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvkyIVYARaQCWOMJrPtk8nIB_GHLc9WaOB4TOsINfOb7c9z53hZRKVRG9gvOvYJ54rXWDnl07uor4FgRRXx-tHlMqO_PqroENTCgSF_hyJe9eCNkKcFs4vrYEj9v5EtARMkBdCtQVgGZWIhmF9mCWigrktCI4Opiqr5_5gQagpZ4qy6hitnjtPenzqTvpZY9n2tc98AZqlVTXF-pEIxxD5zkQdMF_MPMzrXFZ5Mh79ZpDIQM1c9PGB"/>
+</div>
+<h3 class="text-[13px] font-bold uppercase text-on-surface leading-tight mb-1 truncate">Electronics and Calculators</h3>
+<p class="text-[12px] text-[#71717A] leading-snug line-clamp-2 mb-3">Calculators, cameras and gadgets</p>
+<span class="mt-auto text-[11px] font-bold uppercase text-primary-container tracking-wider flex items-center">
+            BROWSE NOW &gt;
+          </span>
+</a>
+<!-- Tile 2 -->
+<a class="group flex flex-col bg-white rounded-[8px] border border-[#E4E4E7] overflow-hidden p-3 hover:-translate-y-1 hover:border-primary-container transition-all" href="#browse-section">
+<div class="w-full aspect-[16/10] rounded-[4px] overflow-hidden bg-zinc-100 mb-3">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A neat stack of hardbound university engineering and medical textbooks alongside study drafting tools on a clean neutral grey wooden surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM5TeG6j_ud-jpE7SCmSmOmvf1qmwPEGE6ybVDNw-NuTvSqRE2PR-_S0AR3VdI6FXpWqLubJTVzuGvfwkgwnJOJS8ks_WaDyMQ96p9bCtjiQ7H9ZTjUXeGVQHOX1p_SivdwDW5q-Ai-5CBdvvpE0t_YarxQF2d-8CiFcXx7JG-C6y-ZROAWSVjpE8XjzHc_SXPNWSKrikwXflRrfRlNLEm2ZJaDN-3W6nJnRpM9DAQJFOB-WNnotS8"/>
+</div>
+<h3 class="text-[13px] font-bold uppercase text-on-surface leading-tight mb-1 truncate">Books and Study Material</h3>
+<p class="text-[12px] text-[#71717A] leading-snug line-clamp-2 mb-3">Textbooks, notes and kits</p>
+<span class="mt-auto text-[11px] font-bold uppercase text-primary-container tracking-wider flex items-center">
+            BROWSE NOW &gt;
+          </span>
+</a>
+<!-- Tile 3 -->
+<a class="group flex flex-col bg-white rounded-[8px] border border-[#E4E4E7] overflow-hidden p-3 hover:-translate-y-1 hover:border-primary-container transition-all" href="#browse-section">
+<div class="w-full aspect-[16/10] rounded-[4px] overflow-hidden bg-zinc-100 mb-3">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Yellow and black heavy-duty cordless power drills and workshop hand tools arranged on a neutral grey matte tabletop under bright studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYnh_ORB4ltAF3SmUHuFvwtZrjHYIegMkaLHjjVlkX7wg5lNde33f_tkB5LDzfGtf3C9Z0YdEeyxnvlnaZWD8bQXAsouMxsvq1Xsy0L8ALbLnMt9b4T10wPGlgqKshVF_-4mHlVWscx0k8FU14TjhGXk_xcXv2ngBXQs_uuqay43a3EPUuss5Qmgqib7wnD3U8-ux6NlMT6fhYs0LSx4Z72GY0a1mcvOjFEJ45_epHXOtHqEC261AG"/>
+</div>
+<h3 class="text-[13px] font-bold uppercase text-on-surface leading-tight mb-1 truncate">Tools and Hardware</h3>
+<p class="text-[12px] text-[#71717A] leading-snug line-clamp-2 mb-3">Drills, ladders and hardware</p>
+<span class="mt-auto text-[11px] font-bold uppercase text-primary-container tracking-wider flex items-center">
+            BROWSE NOW &gt;
+          </span>
+</a>
+<!-- Tile 4 -->
+<a class="group flex flex-col bg-white rounded-[8px] border border-[#E4E4E7] overflow-hidden p-3 hover:-translate-y-1 hover:border-primary-container transition-all" href="#browse-section">
+<div class="w-full aspect-[16/10] rounded-[4px] overflow-hidden bg-zinc-100 mb-3">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A modern brushed stainless steel electric pressure cooker and kitchen blender sitting on a bright slate countertop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMWQDBjrf7YbGX52nj4dtKte4uz2XWeIoIbWXityGZjwxTn4xJ-9fVvLPbsSkII7PN9pzeOEZzotdF_7tbvGckMtyMhYQi6u_ICunWrHMiB0_aaElNVcA3cMW7Cg5PfWLHrg36iVz_uQDN9XZstuLH1D-zWwBxvZWfnHepKVisE4NIcirnOZep7k16FFYt6L8_9rMf0rSCXTqb7MUcHS5o--JWuO-eTEuUrrFg1geQpbhsJI8UpQXK"/>
+</div>
+<h3 class="text-[13px] font-bold uppercase text-on-surface leading-tight mb-1 truncate">Kitchen and Home</h3>
+<p class="text-[12px] text-[#71717A] leading-snug line-clamp-2 mb-3">Cookers, mixers and more</p>
+<span class="mt-auto text-[11px] font-bold uppercase text-primary-container tracking-wider flex items-center">
+            BROWSE NOW &gt;
+          </span>
+</a>
+<!-- Tile 5 -->
+<a class="group flex flex-col bg-white rounded-[8px] border border-[#E4E4E7] overflow-hidden p-3 hover:-translate-y-1 hover:border-primary-container transition-all" href="#browse-section">
+<div class="w-full aspect-[16/10] rounded-[4px] overflow-hidden bg-zinc-100 mb-3">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A compact outdoor camping dome tent assembled with trekking poles and hiking backpack against a clean neutral outdoor backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtEoGYFex4DZuNgHh86FlXcoFTWWo6hvI1qHlTD--nOQYpSvaG-NhD9tURzXAes_eqBHHB4-qfxX9wCDlxEv6eNCyQfJh0FF7JVE0WpG5KEmGeCso34eb_Mhdcj-XTL-ReQT9qEoSMfnPDiwNx25AYr7LFaY1qLRKdGj_M5zJHDiezXOt-ucj6LitwySOZVBkJ8wjP17hOMdPntHjoiXRTiP5ozLENhfuOLvoRIW43LkvFYzlA7ix2"/>
+</div>
+<h3 class="text-[13px] font-bold uppercase text-on-surface leading-tight mb-1 truncate">Sports and Outdoor</h3>
+<p class="text-[12px] text-[#71717A] leading-snug line-clamp-2 mb-3">Tents, bikes and gear</p>
+<span class="mt-auto text-[11px] font-bold uppercase text-primary-container tracking-wider flex items-center">
+            BROWSE NOW &gt;
+          </span>
+</a>
+<!-- Tile 6 -->
+<a class="group flex flex-col bg-white rounded-[8px] border border-[#E4E4E7] overflow-hidden p-3 hover:-translate-y-1 hover:border-primary-container transition-all" href="#browse-section">
+<div class="w-full aspect-[16/10] rounded-[4px] overflow-hidden bg-zinc-100 mb-3">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A premium formal tailored blazer and embroidered traditional sherwani jacket displayed neatly on a minimalist dark studio stand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVFNbm_4ATD4j_b1azuOA5P1AZEoFAYpnxS3WiBF_09VixnnhwQ-vaXs9NQr0U8cVXwfWvhHXZm3xjRDeSd3LjhxeGfYMQpNgTAo2wEKm2Sfh65d66FncqrD7gJ5er8KTP2xoe47yRbvP6FeF0P73Eaph0aSnG52z7WMBqtFMHhCIRJcwbVSJs6rWbzJ6YGnpaodE4yQ4sKWUdbcKy1PychA46IZ6yd3adY-opUDWHC1NQWLwjr9JS"/>
+</div>
+<h3 class="text-[13px] font-bold uppercase text-on-surface leading-tight mb-1 truncate">Clothing and Accessories</h3>
+<p class="text-[12px] text-[#71717A] leading-snug line-clamp-2 mb-3">Formal wear and accessories</p>
+<span class="mt-auto text-[11px] font-bold uppercase text-primary-container tracking-wider flex items-center">
+            BROWSE NOW &gt;
+          </span>
+</a>
+</div>
+</div>
+</section>
+<!-- 4) AVAILABLE NOW (Browse Grid) -->
+<section class="w-full bg-white py-16" id="browse-section">
+<div class="max-w-[1280px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop">
+<!-- Section Header -->
+<div class="relative flex items-center justify-center mb-12">
+<div class="flex items-center gap-4">
+<div class="w-12 h-[2px] bg-primary-container"></div>
+<h2 class="font-headline-lg uppercase text-[32px] font-extrabold tracking-wide text-on-surface">AVAILABLE NOW</h2>
+<div class="w-12 h-[2px] bg-primary-container"></div>
+</div>
+<a class="absolute right-0 text-[12px] font-bold uppercase text-primary-container hover:underline" href="#">
+          VIEW ALL &gt;
+        </a>
+</div>
+<!-- Item Cards 4 cols x 2 rows Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1 -->
+<div class="flex flex-col bg-white border border-[#E4E4E7] rounded-[8px] overflow-hidden hover:border-[#0B0B0C] transition-colors">
+<div class="relative w-full aspect-[4/3] bg-zinc-100 border-b border-[#E4E4E7]">
+<img class="w-full h-full object-cover" data-alt="High contrast crisp photo of a Casio fx-991EX ClassWiz scientific calculator on a clean studio white backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoZ2guLKmZi7kOD0vAnDoNknHXwvk1LqVkfMR-miMliLfldyO-ZmdGce-WcuiTSC3wkJFg4rlKnECc_X1zAeHaeiZ6MK75i4cyn4yxSzwLETM0eomsumD9AtV991RIo_BDO5I-a0yRHDZHjZZYdU4DGySiiwIBPkcfeP2X6lBKLckRAsMEsAXUrdmgcc45A72ofenDqoGpq355f-zt8akPUelb0E1Z--8hipHh4tkAW9q_E6X2-xjV"/>
+<span class="absolute top-3 left-3 bg-primary-container text-white text-[11px] font-bold uppercase px-2 py-0.5 rounded-[3px]">AVAILABLE</span>
+</div>
+<div class="flex flex-col flex-1 p-4 gap-2">
+<span class="text-[12px] font-semibold uppercase text-primary-container">Electronics and Calculators</span>
+<h3 class="font-headline-sm text-[16px] font-semibold text-on-surface line-clamp-2 leading-snug">Casio fx-991EX Scientific Calculator</h3>
+<div class="flex items-center gap-3 text-[14px] text-[#52525B]">
+<span class="inline-flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">check_circle</span> Like New</span>
+<span>•</span>
+<span class="inline-flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">location_on</span> Multan, Gulgasht</span>
+</div>
+<div class="inline-flex items-center gap-1.5 text-[12px] text-secondary font-medium bg-[#F4F4F5] px-2 py-1 rounded-[4px] w-fit">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span>
+<span>20 Oct - 30 Nov 2026</span>
+</div>
+<div class="h-[1px] bg-[#E4E4E7] my-1"></div>
+<div class="flex items-center justify-between">
+<div>
+<span class="font-headline-lg text-[28px] font-extrabold text-on-surface leading-none">Rs. 150</span>
+<span class="text-[14px] text-secondary ml-1">/ day</span>
+</div>
+<div class="flex items-center gap-1.5">
+<div class="w-7 h-7 rounded-full bg-[#18181B] text-white text-[11px] font-bold flex items-center justify-center">ZM</div>
+<span class="text-[12px] font-medium text-on-surface">Zainab M.</span>
+</div>
+</div>
+<button class="mt-2 w-full h-11 bg-[#0B0B0C] hover:bg-zinc-800 text-white text-[14px] font-bold uppercase rounded-[4px] flex items-center justify-center gap-1 transition-colors" type="button">
+<span>VIEW DETAILS</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex flex-col bg-white border border-[#E4E4E7] rounded-[8px] overflow-hidden hover:border-[#0B0B0C] transition-colors">
+<div class="relative w-full aspect-[4/3] bg-zinc-100 border-b border-[#E4E4E7]">
+<img class="w-full h-full object-cover" data-alt="Technical engineering precision compass set and drafting tools arranged neatly inside a hard shell case on a clean drafting desk." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQcyxZq_Wh3YFKkvxNHFbOUbGL1zYq72pErKBNnVUVL5H3wXS8naSH7iPzMkp7h6pU1cIaRuZSyT7L65ogUJF0E0QFcXpRPlp6AlLnJLB8PUhQjLtL1QkBoxKEyxGdnAZjUKo_xJr1w4Eubl6Vutnlfn1RmFafUGnfcPTpkkWOuW4p_niCZ1bZJ2ZCtfO7lCeXqnx3dQw_WOv5dzT1_gP8iouXObOcxlYDs4nyb09js86AKrx1EfTz"/>
+<span class="absolute top-3 left-3 bg-primary-container text-white text-[11px] font-bold uppercase px-2 py-0.5 rounded-[3px]">AVAILABLE</span>
+</div>
+<div class="flex flex-col flex-1 p-4 gap-2">
+<span class="text-[12px] font-semibold uppercase text-primary-container">Books and Study Material</span>
+<h3 class="font-headline-sm text-[16px] font-semibold text-on-surface line-clamp-2 leading-snug">Engineering Drafting Set</h3>
+<div class="flex items-center gap-3 text-[14px] text-[#52525B]">
+<span class="inline-flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">check_circle</span> Good</span>
+<span>•</span>
+<span class="inline-flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">location_on</span> Multan, Cantt</span>
+</div>
+<div class="inline-flex items-center gap-1.5 text-[12px] text-secondary font-medium bg-[#F4F4F5] px-2 py-1 rounded-[4px] w-fit">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span>
+<span>20 Oct - 30 Nov 2026</span>
+</div>
+<div class="h-[1px] bg-[#E4E4E7] my-1"></div>
+<div class="flex items-center justify-between">
+<div>
+<span class="font-headline-lg text-[28px] font-extrabold text-on-surface leading-none">Rs. 100</span>
+<span class="text-[14px] text-secondary ml-1">/ day</span>
+</div>
+<div class="flex items-center gap-1.5">
+<div class="w-7 h-7 rounded-full bg-[#18181B] text-white text-[11px] font-bold flex items-center justify-center">AK</div>
+<span class="text-[12px] font-medium text-on-surface">Ahmed K.</span>
+</div>
+</div>
+<button class="mt-2 w-full h-11 bg-[#0B0B0C] hover:bg-zinc-800 text-white text-[14px] font-bold uppercase rounded-[4px] flex items-center justify-center gap-1 transition-colors" type="button">
+<span>VIEW DETAILS</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="flex flex-col bg-white border border-[#E4E4E7] rounded-[8px] overflow-hidden hover:border-[#0B0B0C] transition-colors">
+<div class="relative w-full aspect-[4/3] bg-zinc-100 border-b border-[#E4E4E7]">
+<img class="w-full h-full object-cover" data-alt="DeWalt 20V yellow and black cordless drill with battery pack resting upright on a concrete workshop floor with subtle studio rim lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADC0L6m46VqOCQO1RtPxrZyzPpCx0TfukMbK1GP3u-KN5VR2xITMKjypy9OFdfmVqtfZPaXmL8IU9coqVD3vfNLSt7aZym5ulsJAcJmpEjnrRnd0IAb2DbjZROicSODo90AAEGI_co_sD8nXT-qXOJYQkSb7ZzxNbm_-pnnv-0xncOtpRDKlt0q9JViV3t9nQ1o_TB6hD0hXyZVDxxlv6YBPgL1rWmTslq2PQJgOpP6hEYTjwANBRG"/>
+<span class="absolute top-3 left-3 bg-primary-container text-white text-[11px] font-bold uppercase px-2 py-0.5 rounded-[3px]">AVAILABLE</span>
+</div>
+<div class="flex flex-col flex-1 p-4 gap-2">
+<span class="text-[12px] font-semibold uppercase text-primary-container">Tools and Hardware</span>
+<h3 class="font-headline-sm text-[16px] font-semibold text-on-surface line-clamp-2 leading-snug">DeWalt 20V Cordless Drill</h3>
+<div class="flex items-center gap-3 text-[14px] text-[#52525B]">
+<span class="inline-flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">check_circle</span> Good</span>
+<span>•</span>
+<span class="inline-flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">location_on</span> Lahore, Johar Town</span>
+</div>
+<div class="inline-flex items-center gap-1.5 text-[12px] text-secondary font-medium bg-[#F4F4F5] px-2 py-1 rounded-[4px] w-fit">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span>
+<span>20 Oct - 30 Nov 2026</span>
+</div>
+<div class="h-[1px] bg-[#E4E4E7] my-1"></div>
+<div class="flex items-center justify-between">
+<div>
+<span class="font-headline-lg text-[28px] font-extrabold text-on-surface leading-none">Rs. 500</span>
+<span class="text-[14px] text-secondary ml-1">/ day</span>
+</div>
+<div class="flex items-center gap-1.5">
+<div class="w-7 h-7 rounded-full bg-[#18181B] text-white text-[11px] font-bold flex items-center justify-center">HS</div>
+<span class="text-[12px] font-medium text-on-surface">Hamza S.</span>
+</div>
+</div>
+<button class="mt-2 w-full h-11 bg-[#0B0B0C] hover:bg-zinc-800 text-white text-[14px] font-bold uppercase rounded-[4px] flex items-center justify-center gap-1 transition-colors" type="button">
+<span>VIEW DETAILS</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="flex flex-col bg-white border border-[#E4E4E7] rounded-[8px] overflow-hidden hover:border-[#0B0B0C] transition-colors">
+<div class="relative w-full aspect-[4/3] bg-zinc-100 border-b border-[#E4E4E7]">
+<img class="w-full h-full object-cover" data-alt="A clean modern electric 1.8 liter stainless steel rice cooker with digital control display on a light quartz kitchen table." src="https://lh3.googleusercontent.com/aida-public/AB6AXuArj8qduQdzMFslS1I0nJy59Nk-c1ywAOzFHR0_jlkkHRvwKzXRaTLkjGQohLcJO1MKO8x6tw6Z3csw3TCPCiXFeVXqNCbVL46oS36sxBE6EA1roX3uL2yqOTDQVhu5KwhH_eoRzz3JtFlHWozVuOgSZE5V-qwn_T_YPD5wA3bsuFhh-mE05R239zrHzMcDW6r9mRyby1_VFcdwtzKSFjJ990xKZzO3vnFixLsKRgIgNjf43VF9UoDs"/>
+<span class="absolute top-3 left-3 bg-primary-container text-white text-[11px] font-bold uppercase px-2 py-0.5 rounded-[3px]">AVAILABLE</span>
+</div>
+<div class="flex flex-col flex-1 p-4 gap-2">
+<span class="text-[12px] font-semibold uppercase text-primary-container">Kitchen and Home</span>
+<h3 class="font-headline-sm text-[16px] font-semibold text-on-surface line-clamp-2 leading-snug">Electric Rice Cooker 1.8L</h3>
+<div class="flex items-center gap-3 text-[14px] text-[#52525B]">
+<span class="inline-flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">check_circle</span> Like New</span>
+<span>•</span>
+<span class="inline-flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">location_on</span> Karachi, Gulshan</span>
+</div>
+<div class="inline-flex items-center gap-1.5 text-[12px] text-secondary font-medium bg-[#F4F4F5] px-2 py-1 rounded-[4px] w-fit">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span>
+<span>20 Oct - 30 Nov 2026</span>
+</div>
+<div class="h-[1px] bg-[#E4E4E7] my-1"></div>
+<div class="flex items-center justify-between">
+<div>
+<span class="font-headline-lg text-[28px] font-extrabold text-on-surface leading-none">Rs. 200</span>
+<span class="text-[14px] text-secondary ml-1">/ day</span>
+</div>
+<div class="flex items-center gap-1.5">
+<div class="w-7 h-7 rounded-full bg-[#18181B] text-white text-[11px] font-bold flex items-center justify-center">FA</div>
+<span class="text-[12px] font-medium text-on-surface">Fatima A.</span>
+</div>
+</div>
+<button class="mt-2 w-full h-11 bg-[#0B0B0C] hover:bg-zinc-800 text-white text-[14px] font-bold uppercase rounded-[4px] flex items-center justify-center gap-1 transition-colors" type="button">
+<span>VIEW DETAILS</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="flex flex-col bg-white border border-[#E4E4E7] rounded-[8px] overflow-hidden hover:border-[#0B0B0C] transition-colors">
+<div class="relative w-full aspect-[4/3] bg-zinc-100 border-b border-[#E4E4E7]">
+<img class="w-full h-full object-cover" data-alt="A thick computer science college textbook titled Data Structures and Algorithms open slightly on a minimalist study table." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLAYadKu0a4_XHq7UWkmAWs6kHZANEuCWQfTAOma-qC-NpV8BBRwdU6NanrfXgF9crM2HQTRgQm6aqyLiKo3G3Jl5WWmvA17wpE8iEjtoK4Khv9ml5Qbp92R06CVY_BgoNsBBqDOjdwY0GNzuszfTcnPhDkm4dWPOw7-Kyjj_eVzw1NSVsHqwxdaD1KqzaZJi3L5mkd-4oPD11RKxOdb3icMahsc-erAu3JIfEDA6KUj4atAYtNnjO"/>
+<span class="absolute top-3 left-3 bg-primary-container text-white text-[11px] font-bold uppercase px-2 py-0.5 rounded-[3px]">AVAILABLE</span>
+</div>
+<div class="flex flex-col flex-1 p-4 gap-2">
+<span class="text-[12px] font-semibold uppercase text-primary-container">Books and Study Material</span>
+<h3 class="font-headline-sm text-[16px] font-semibold text-on-surface line-clamp-2 leading-snug">Data Structures Textbook</h3>
+<div class="flex items-center gap-3 text-[14px] text-[#52525B]">
+<span class="inline-flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">check_circle</span> Fair</span>
+<span>•</span>
+<span class="inline-flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">location_on</span> Multan, Gulgasht</span>
+</div>
+<div class="inline-flex items-center gap-1.5 text-[12px] text-secondary font-medium bg-[#F4F4F5] px-2 py-1 rounded-[4px] w-fit">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span>
+<span>20 Oct - 30 Nov 2026</span>
+</div>
+<div class="h-[1px] bg-[#E4E4E7] my-1"></div>
+<div class="flex items-center justify-between">
+<div>
+<span class="font-headline-lg text-[28px] font-extrabold text-on-surface leading-none">Rs. 80</span>
+<span class="text-[14px] text-secondary ml-1">/ day</span>
+</div>
+<div class="flex items-center gap-1.5">
+<div class="w-7 h-7 rounded-full bg-[#18181B] text-white text-[11px] font-bold flex items-center justify-center">BR</div>
+<span class="text-[12px] font-medium text-on-surface">Bilal R.</span>
+</div>
+</div>
+<button class="mt-2 w-full h-11 bg-[#0B0B0C] hover:bg-zinc-800 text-white text-[14px] font-bold uppercase rounded-[4px] flex items-center justify-center gap-1 transition-colors" type="button">
+<span>VIEW DETAILS</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="flex flex-col bg-white border border-[#E4E4E7] rounded-[8px] overflow-hidden hover:border-[#0B0B0C] transition-colors">
+<div class="relative w-full aspect-[4/3] bg-zinc-100 border-b border-[#E4E4E7]">
+<img class="w-full h-full object-cover" data-alt="A dark green and slate four-person dome camping tent pitched cleanly on a clean neutral studio platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFpA8EGRZGkEU8Q4Nf-9FRe6YNLZIhnHRk87J-GhH-DZn8x80tJwJK5TEohawP-uxwJctgFe1xN3wA0HrCh2NACytmW1A4Ze6x-Ownjd4DSCGBGIFd2WjgXcwxc1hzXmSXEIsz1G5-psrbiGryxedBP-zwBvML5YgVO2e1DYQZINzZ9R6dYvXE8IvdG0AE9_0QdNxGKTEqCTKXj1dGI4wKY-AflULJ-JTMOV7w4IL_5b0DVk0_v6ZN"/>
+<span class="absolute top-3 left-3 bg-primary-container text-white text-[11px] font-bold uppercase px-2 py-0.5 rounded-[3px]">AVAILABLE</span>
+</div>
+<div class="flex flex-col flex-1 p-4 gap-2">
+<span class="text-[12px] font-semibold uppercase text-primary-container">Sports and Outdoor</span>
+<h3 class="font-headline-sm text-[16px] font-semibold text-on-surface line-clamp-2 leading-snug">4-Person Camping Tent</h3>
+<div class="flex items-center gap-3 text-[14px] text-[#52525B]">
+<span class="inline-flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">check_circle</span> Good</span>
+<span>•</span>
+<span class="inline-flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">location_on</span> Islamabad, F-10</span>
+</div>
+<div class="inline-flex items-center gap-1.5 text-[12px] text-secondary font-medium bg-[#F4F4F5] px-2 py-1 rounded-[4px] w-fit">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span>
+<span>20 Oct - 30 Nov 2026</span>
+</div>
+<div class="h-[1px] bg-[#E4E4E7] my-1"></div>
+<div class="flex items-center justify-between">
+<div>
+<span class="font-headline-lg text-[28px] font-extrabold text-on-surface leading-none">Rs. 700</span>
+<span class="text-[14px] text-secondary ml-1">/ day</span>
+</div>
+<div class="flex items-center gap-1.5">
+<div class="w-7 h-7 rounded-full bg-[#18181B] text-white text-[11px] font-bold flex items-center justify-center">UT</div>
+<span class="text-[12px] font-medium text-on-surface">Usman T.</span>
+</div>
+</div>
+<button class="mt-2 w-full h-11 bg-[#0B0B0C] hover:bg-zinc-800 text-white text-[14px] font-bold uppercase rounded-[4px] flex items-center justify-center gap-1 transition-colors" type="button">
+<span>VIEW DETAILS</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 7 -->
+<div class="flex flex-col bg-white border border-[#E4E4E7] rounded-[8px] overflow-hidden hover:border-[#0B0B0C] transition-colors">
+<div class="relative w-full aspect-[4/3] bg-zinc-100 border-b border-[#E4E4E7]">
+<img class="w-full h-full object-cover" data-alt="A sleek black cylindrical 200W high-power party speaker with soft ambient indicator lights on a dark matte floor." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWhz4qgE1Z7R7HZrmI5zURFscfto4M2b6IVxG5PxF2k34F42D3WUpShVXngXGfUP3P6Gb0Q7Kqdif_Se4uvD6XmZRZNQrhRFdE9MgJWK6dej9M9ZPoONIyvawEI16ukN9jTXpefXuweoqWWssYyVWYXQWDsU6HcacdvITORwf8R9NOZOyOArMwaEpZClUkKAtnJQIC6W0goFgVj90N6uDLEiDzXFCNrG26FhyXbm8ltOj0Vh2I-6_X"/>
+<span class="absolute top-3 left-3 bg-primary-container text-white text-[11px] font-bold uppercase px-2 py-0.5 rounded-[3px]">AVAILABLE</span>
+</div>
+<div class="flex flex-col flex-1 p-4 gap-2">
+<span class="text-[12px] font-semibold uppercase text-primary-container">Electronics and Calculators</span>
+<h3 class="font-headline-sm text-[16px] font-semibold text-on-surface line-clamp-2 leading-snug">Party Speaker 200W</h3>
+<div class="flex items-center gap-3 text-[14px] text-[#52525B]">
+<span class="inline-flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">check_circle</span> Good</span>
+<span>•</span>
+<span class="inline-flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">location_on</span> Lahore, DHA</span>
+</div>
+<div class="inline-flex items-center gap-1.5 text-[12px] text-secondary font-medium bg-[#F4F4F5] px-2 py-1 rounded-[4px] w-fit">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span>
+<span>20 Oct - 30 Nov 2026</span>
+</div>
+<div class="h-[1px] bg-[#E4E4E7] my-1"></div>
+<div class="flex items-center justify-between">
+<div>
+<span class="font-headline-lg text-[28px] font-extrabold text-on-surface leading-none">Rs. 600</span>
+<span class="text-[14px] text-secondary ml-1">/ day</span>
+</div>
+<div class="flex items-center gap-1.5">
+<div class="w-7 h-7 rounded-full bg-[#18181B] text-white text-[11px] font-bold flex items-center justify-center">SR</div>
+<span class="text-[12px] font-medium text-on-surface">Sana R.</span>
+</div>
+</div>
+<button class="mt-2 w-full h-11 bg-[#0B0B0C] hover:bg-zinc-800 text-white text-[14px] font-bold uppercase rounded-[4px] flex items-center justify-center gap-1 transition-colors" type="button">
+<span>VIEW DETAILS</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 8 -->
+<div class="flex flex-col bg-white border border-[#E4E4E7] rounded-[8px] overflow-hidden hover:border-[#0B0B0C] transition-colors">
+<div class="relative w-full aspect-[4/3] bg-zinc-100 border-b border-[#E4E4E7]">
+<img class="w-full h-full object-cover" data-alt="An 8-foot lightweight aluminum folding step ladder standing securely against a clean neutral workshop wall." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8zRfgHYyZ8N7rk2dpffj2UfAKQtRs1p_Q7SEx4E3mHzB5qMcllcLmEr0ilU3RA4i_8a5Wvc1ZJIA38Bg0DTpLcGNsEzKWlkB3EroFbI6pfqhNEokaHsn6d1txtQLDEmItRCcxhp1l9JlweF-bTjBpNd6lgFn4vDnNkgsoP69sZtKipyxaZgGpMPzfWKUwv_qsBGl8Li430RpWiefZtDaKGF79S4KMucVx-uP75EyMaElVmwP410lA"/>
+<span class="absolute top-3 left-3 bg-primary-container text-white text-[11px] font-bold uppercase px-2 py-0.5 rounded-[3px]">AVAILABLE</span>
+</div>
+<div class="flex flex-col flex-1 p-4 gap-2">
+<span class="text-[12px] font-semibold uppercase text-primary-container">Tools and Hardware</span>
+<h3 class="font-headline-sm text-[16px] font-semibold text-on-surface line-clamp-2 leading-snug">Aluminium Ladder 8ft</h3>
+<div class="flex items-center gap-3 text-[14px] text-[#52525B]">
+<span class="inline-flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">check_circle</span> Good</span>
+<span>•</span>
+<span class="inline-flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">location_on</span> Rawalpindi, Bahria</span>
+</div>
+<div class="inline-flex items-center gap-1.5 text-[12px] text-secondary font-medium bg-[#F4F4F5] px-2 py-1 rounded-[4px] w-fit">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span>
+<span>20 Oct - 30 Nov 2026</span>
+</div>
+<div class="h-[1px] bg-[#E4E4E7] my-1"></div>
+<div class="flex items-center justify-between">
+<div>
+<span class="font-headline-lg text-[28px] font-extrabold text-on-surface leading-none">Rs. 300</span>
+<span class="text-[14px] text-secondary ml-1">/ day</span>
+</div>
+<div class="flex items-center gap-1.5">
+<div class="w-7 h-7 rounded-full bg-[#18181B] text-white text-[11px] font-bold flex items-center justify-center">IH</div>
+<span class="text-[12px] font-medium text-on-surface">Imran H.</span>
+</div>
+</div>
+<button class="mt-2 w-full h-11 bg-[#0B0B0C] hover:bg-zinc-800 text-white text-[14px] font-bold uppercase rounded-[4px] flex items-center justify-center gap-1 transition-colors" type="button">
+<span>VIEW DETAILS</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Show More Items Button -->
+<div class="flex justify-center mt-10">
+<button class="h-12 px-8 border-[1.5px] border-[#0B0B0C] text-[#0B0B0C] hover:bg-zinc-100 rounded-[4px] font-bold text-[14px] uppercase tracking-wider transition-colors" type="button">
+          SHOW MORE ITEMS
+        </button>
+</div>
+</div>
+</section>
+<!-- 5) TRUST STRIP -->
+<section class="w-full bg-[#0B0B0C] border-y border-[#27272A] py-6">
+<div class="max-w-[1280px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-0">
+<!-- Item 1 -->
+<div class="flex items-center gap-3.5 lg:px-6 first:pl-0">
+<span class="material-symbols-outlined text-[#EF3340] text-[32px] shrink-0">verified</span>
+<div>
+<div class="text-[14px] font-bold uppercase text-white leading-tight">OWNER APPROVAL</div>
+<div class="text-[12px] text-[#A1A1AA] leading-snug">Nothing happens without a yes</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center gap-3.5 lg:px-6 lg:border-l border-[#27272A]">
+<span class="material-symbols-outlined text-[#EF3340] text-[32px] shrink-0">event_busy</span>
+<div>
+<div class="text-[14px] font-bold uppercase text-white leading-tight">NO DOUBLE BOOKINGS</div>
+<div class="text-[12px] text-[#A1A1AA] leading-snug">Dates never overlap</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex items-center gap-3.5 lg:px-6 lg:border-l border-[#27272A]">
+<span class="material-symbols-outlined text-[#EF3340] text-[32px] shrink-0">payments</span>
+<div>
+<div class="text-[14px] font-bold uppercase text-white leading-tight">PAY THE OWNER DIRECTLY</div>
+<div class="text-[12px] text-[#A1A1AA] leading-snug">Cash or transfer</div>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="flex items-center gap-3.5 lg:px-6 lg:border-l border-[#27272A]">
+<span class="material-symbols-outlined text-[#EF3340] text-[32px] shrink-0">shield</span>
+<div>
+<div class="text-[14px] font-bold uppercase text-white leading-tight">GENERAL LOCATIONS ONLY</div>
+<div class="text-[12px] text-[#A1A1AA] leading-snug">Your address stays private</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6) HOW IT WORKS + FAQ -->
+<section class="w-full bg-white py-16" id="how-it-works">
+<div class="max-w-[1280px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Left Column: How It Works (8 Cols) -->
+<div class="lg:col-span-8 flex flex-col">
+<div class="flex items-center gap-3">
+<h2 class="font-headline-lg uppercase text-[32px] font-extrabold tracking-wide text-on-surface">HOW IT WORKS</h2>
+<div class="w-12 h-[2px] bg-primary-container"></div>
+</div>
+<!-- 4 Step Photo Tiles Row -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
+<!-- Step 1 -->
+<div class="relative h-64 rounded-[8px] overflow-hidden bg-[#18181B] flex flex-col justify-between p-4 group">
+<div class="absolute inset-0 bg-gradient-to-t from-[#0B0B0C] via-[#0B0B0C]/70 to-transparent z-10"></div>
+<img class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-300" data-alt="A smartphone taking a close-up photo of an electronic tool on a clean table for an equipment listing on a rental platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGsbYw88IiSLyV-HHqdSw4CVC-1RjUzaRnCk-v-RgTCrXVEryYOoTEJRsd-KsSKK6DtEXxSkkwFQlv0DdsHv2ac58PmDYBDoCOPJ1Stcno43b-SIntZxacrZ1vjz3EwaUCg0Tk7t2OufBAIHLYJmUqRYCmQ0fZKN8jaCsu_VSvpPp0DKGPVtppX19pDoZEa-wAZA98v3MOL3KubbSAFrizMz4rcYrJbDlJPUwVZLOE99iDuPRbAVfV"/>
+<div class="relative z-20 text-[40px] font-extrabold font-headline-lg text-[#EF3340] leading-none">01</div>
+<div class="relative z-20">
+<div class="text-[14px] font-bold uppercase text-white mb-1">LIST AN ITEM</div>
+<div class="text-[12px] text-[#D4D4D8] leading-snug">Add a photo and your daily price</div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative h-64 rounded-[8px] overflow-hidden bg-[#18181B] flex flex-col justify-between p-4 group">
+<div class="absolute inset-0 bg-gradient-to-t from-[#0B0B0C] via-[#0B0B0C]/70 to-transparent z-10"></div>
+<img class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-300" data-alt="Person tapping on a clean digital calendar interface on a mobile device selecting rental dates with clear graphics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1aYNWFnIYQuZ2V5WBwPfrS2-X5Zvg5DDdPySnDjyK9uyQ-_aACAGeJh8oBLvs2nC800PFd0hSef4MKDtk77p3Xr_wl0-JW9HAkU-5PvOrel9g8kLEXqKG843d0Wtd_cfa0bbiQw40FeFqNTpHwnY064bcvBwciDIeQxGonBcmycPPnkuVZ80Iz7RKAleurewtrjvs-PbN4ahqMQ6ZjvSTzCfaiY90AwJI6UGdnQyGdfxsLxRvhI_P"/>
+<div class="relative z-20 text-[40px] font-extrabold font-headline-lg text-[#EF3340] leading-none">02</div>
+<div class="relative z-20">
+<div class="text-[14px] font-bold uppercase text-white mb-1">REQUEST DATES</div>
+<div class="text-[12px] text-[#D4D4D8] leading-snug">Choose start and end date</div>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative h-64 rounded-[8px] overflow-hidden bg-[#18181B] flex flex-col justify-between p-4 group">
+<div class="absolute inset-0 bg-gradient-to-t from-[#0B0B0C] via-[#0B0B0C]/70 to-transparent z-10"></div>
+<img class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-300" data-alt="A smiling equipment owner reviewing and accepting a booking prompt on their tablet screen in a bright modern home setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7d2bJGkYc5gbYML4bLIxCAXj86snDA-5KbEiJbp39v_lkZSCUwLYVKyBjOXxyjf3Sct7-j-uhH-8gH_AnsOPyHhHevMlzU9qn-rlgU22QD9T_BUgKfKnX0kDkdPBYr915kG21XZnQ1zs5Wu50bz3m5iGnj21MUszsM3px1YK238J4OoHGIYrHEkyQhB6dBGlYtLW1-mQti8CI0SBEYyNdC1Wa-boHQnYNoe597Qb16OrRnbh8Cn6l"/>
+<div class="relative z-20 text-[40px] font-extrabold font-headline-lg text-[#EF3340] leading-none">03</div>
+<div class="relative z-20">
+<div class="text-[14px] font-bold uppercase text-white mb-1">OWNER APPROVES</div>
+<div class="text-[12px] text-[#D4D4D8] leading-snug">Accept or reject every request</div>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="relative h-64 rounded-[8px] overflow-hidden bg-[#18181B] flex flex-col justify-between p-4 group">
+<div class="absolute inset-0 bg-gradient-to-t from-[#0B0B0C] via-[#0B0B0C]/70 to-transparent z-10"></div>
+<img class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-300" data-alt="Two peers exchanging handshake and rental item box outdoors in a secure neighborhood setting under day light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgBBcUWg5x9vP6zm8pyBIBcbKQQb4EDxrH9HzZCMIaaAMVp__ChJ-VxBufqTWpMhON5kXdVX-su5-eekVvW7xsPglj8hMwHcaOUBNc86T9BqXwsF5CWpMWtQncBXJiVRJoB6qINkC3fwYV27_CY61TYhlq_LzFT5VZR0XI6cHdYbEmdeW2Au8-6BhvvdHyYR-Odjpn8OT6-xS9cDgrMV-En7IE2YOFDRDt8RGwPUOlJtJ1zqxJnKEE"/>
+<div class="relative z-20 text-[40px] font-extrabold font-headline-lg text-[#EF3340] leading-none">04</div>
+<div class="relative z-20">
+<div class="text-[14px] font-bold uppercase text-white mb-1">SETTLE DIRECTLY</div>
+<div class="text-[12px] text-[#D4D4D8] leading-snug">Share emails and pay the owner</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: FAQ Card (4 Cols) -->
+<div class="lg:col-span-4 flex flex-col">
+<div class="bg-[#F4F4F5] rounded-[12px] p-6 border border-[#E4E4E7] h-full flex flex-col justify-between">
+<div>
+<h3 class="text-[14px] font-bold uppercase tracking-wider text-on-surface mb-4">FREQUENTLY ASKED QUESTIONS</h3>
+<!-- Accordion Items -->
+<div class="flex flex-col">
+<!-- Item 1 (Open) -->
+<div class="py-3 border-b border-[#E4E4E7]">
+<button class="faq-toggle w-full flex items-center justify-between text-left text-[14px] font-semibold text-on-surface" data-target="faq-1" type="button">
+<span>Is Borrowly free to join?</span>
+<span class="material-symbols-outlined text-[18px] text-secondary faq-icon">remove</span>
+</button>
+<div class="faq-content text-[13px] text-[#52525B] mt-2 leading-relaxed" id="faq-1">
+                    Yes. Owners set a daily price for each item.
+                  </div>
+</div>
+<!-- Item 2 -->
+<div class="py-3 border-b border-[#E4E4E7]">
+<button class="faq-toggle w-full flex items-center justify-between text-left text-[14px] font-semibold text-on-surface" data-target="faq-2" type="button">
+<span>How do I pay?</span>
+<span class="material-symbols-outlined text-[18px] text-secondary faq-icon">add</span>
+</button>
+<div class="faq-content hidden text-[13px] text-[#52525B] mt-2 leading-relaxed" id="faq-2">
+                    You pay the owner directly via cash on pickup or direct bank transfer upon receiving their contact details.
+                  </div>
+</div>
+<!-- Item 3 -->
+<div class="py-3 border-b border-[#E4E4E7]">
+<button class="faq-toggle w-full flex items-center justify-between text-left text-[14px] font-semibold text-on-surface" data-target="faq-3" type="button">
+<span>What if two people want the same dates?</span>
+<span class="material-symbols-outlined text-[18px] text-secondary faq-icon">add</span>
+</button>
+<div class="faq-content hidden text-[13px] text-[#52525B] mt-2 leading-relaxed" id="faq-3">
+                    Once the owner approves a booking for specific dates, the calendar automatically locks to eliminate double bookings.
+                  </div>
+</div>
+<!-- Item 4 -->
+<div class="py-3">
+<button class="faq-toggle w-full flex items-center justify-between text-left text-[14px] font-semibold text-on-surface" data-target="faq-4" type="button">
+<span>Can anyone list an item?</span>
+<span class="material-symbols-outlined text-[18px] text-secondary faq-icon">add</span>
+</button>
+<div class="faq-content hidden text-[13px] text-[#52525B] mt-2 leading-relaxed" id="faq-4">
+                    Yes, any verified community member with a registered phone or CNIC verification can list utility items.
+                  </div>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-[#E4E4E7] flex items-center justify-between text-[12px]">
+<span class="text-[#71717A]">Have more questions?</span>
+<a class="font-bold uppercase text-primary-container hover:underline" href="#">READ BORROWER FAQ &gt;</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7) RED CTA BAND -->
+<section class="w-full bg-[#D71920] relative overflow-hidden py-12" style="background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.04) 10px, transparent 10px, transparent 20px);">
+<div class="max-w-[1280px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop flex flex-col md:flex-row items-center justify-between gap-6">
+<!-- Left Side -->
+<div class="flex items-center gap-5">
+<div class="w-14 h-14 rounded-full bg-white flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-[#D71920] text-[28px]">key</span>
+</div>
+<div>
+<h2 class="font-headline-lg text-[32px] md:text-[36px] font-extrabold uppercase text-white leading-tight">GOT SOMETHING SITTING IDLE?</h2>
+<p class="font-body-lg text-[16px] text-red-100 leading-normal">List it in minutes and set your own daily price.</p>
+</div>
+</div>
+<!-- Right Side -->
+<div>
+<a class="h-14 px-10 bg-[#0B0B0C] hover:bg-zinc-900 text-white text-[14px] font-bold uppercase tracking-[0.06em] rounded-[4px] inline-flex items-center justify-center transition-colors shadow-lg" href="#">
+          LIST AN ITEM
+        </a>
+</div>
+</div>
+</section>
+<!-- Interactive JavaScript for Chips and FAQ Accordion -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // FAQ Accordion logic
+      const toggles = document.querySelectorAll('.faq-toggle');
+      toggles.forEach(toggle => {
+        toggle.addEventListener('click', function () {
+          const targetId = this.getAttribute('data-target');
+          const content = document.getElementById(targetId);
+          const icon = this.querySelector('.faq-icon');
+          
+          const isCurrentlyHidden = content.classList.contains('hidden');
+          
+          // Close all FAQ items
+          document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+          document.querySelectorAll('.faq-icon').forEach(i => i.textContent = 'add');
+          
+          if (isCurrentlyHidden) {
+            content.classList.remove('hidden');
+            icon.textContent = 'remove';
+          }
+        });
+      });
+
+      // Quick filter chips logic
+      const chips = document.querySelectorAll('.chip-filter');
+      const categorySelect = document.getElementById('categorySelect');
+
+      chips.forEach(chip => {
+        chip.addEventListener('click', function () {
+          chips.forEach(c => {
+            c.classList.remove('bg-primary-container', 'text-white');
+            c.classList.add('bg-[#F4F4F5]', 'text-[#52525B]');
+          });
+          this.classList.remove('bg-[#F4F4F5]', 'text-[#52525B]');
+          this.classList.add('bg-primary-container', 'text-white');
+
+          const cat = this.getAttribute('data-category');
+          if (categorySelect) {
+            if (cat === 'all') categorySelect.value = 'all';
+            else if (categorySelect.querySelector(`option[value="${cat}"]`)) {
+              categorySelect.value = cat;
+            }
+          }
+        });
+      });
+    });
+  </script>
+</div></main><footer class="w-full bg-[#0B0B0C] border-t border-[#27272A] text-secondary-fixed-dim"><div class="max-w-[1280px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl"><div class="grid grid-cols-1 md:grid-cols-12 gap-gutter-desktop pb-space-xl border-b border-[#27272A]"><div class="md:col-span-5 flex flex-col items-start gap-space-md"><a class="block" data-path="browse-rentals" href="#"><img alt="Borrowly" class="h-7 md:h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WI7tDpapJIIa7X-w_Zn9QvOk2m20WKLFCs7L7ACnZ9Sn5sxFVrKoBAfERpO-PVJibpfQDg1OJp8sLv0XlpnKQ9yb9hcEHUhfpBBbfsahSzYiHI2Nvw5X3Sh1rpgWyBI3Af3EHAX0hRLvyRH3FxErSzxZAdRjEY3JrU3inkfrVmmaVSruZZP9LnkZ3rGdBPUnAb7fDPjdkKDKD1QhkUHeeJgQ8npXl0gAYmrDR1Yin0I6HPwR105Oun66KVXCYTQu_5FG689I7uYA"/></a><p class="font-body-md text-body-md text-secondary-fixed-dim max-w-sm leading-relaxed">Open peer-to-peer rental marketplace across Pakistan. Rent everyday items directly from owners in your city.</p></div><div class="md:col-span-3 flex flex-col gap-space-sm"><h3 class="font-headline-sm text-headline-sm uppercase text-on-secondary tracking-wider">Categories</h3><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-secondary-fixed-dim"><li class="hover:text-on-secondary transition-colors cursor-pointer">Electronics &amp; Cameras</li><li class="hover:text-on-secondary transition-colors cursor-pointer">Power Tools &amp; Equipment</li><li class="hover:text-on-secondary transition-colors cursor-pointer">Sports &amp; Outdoor Gear</li><li class="hover:text-on-secondary transition-colors cursor-pointer">Academic &amp; Books</li></ul></div><div class="md:col-span-2 flex flex-col gap-space-sm"><h3 class="font-headline-sm text-headline-sm uppercase text-on-secondary tracking-wider">Platform</h3><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-secondary-fixed-dim"><li><a class="hover:text-on-secondary transition-colors" data-path="how-it-works" href="#">How It Works</a></li><li><a class="hover:text-on-secondary transition-colors" data-path="owner-guidelines" href="#">Owner Guidelines</a></li><li><a class="hover:text-on-secondary transition-colors" data-path="borrower-faq" href="#">Borrower FAQ</a></li></ul></div><div class="md:col-span-2 flex flex-col gap-space-sm"><h3 class="font-headline-sm text-headline-sm uppercase text-on-secondary tracking-wider">Trust &amp; Security</h3><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-secondary-fixed-dim"><li>CNIC Peer Verification</li><li>Community Reviews</li><li>Damage Protection Policy</li><li>Support Desk</li></ul></div></div><div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-secondary"><p>© 2026 Borrowly. All rights reserved.</p><div class="flex items-center gap-space-lg"><span>Lahore</span><span>Karachi</span><span>Islamabad</span><span>Peshawar</span></div></div></div></footer></body></html>

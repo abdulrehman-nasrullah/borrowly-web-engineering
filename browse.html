@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore and rent everyday equipment, cameras, tools, camping gear, and academic books across Pakistan on Borrowly.">
+  <title>Browse Rentals — Borrowly</title>
+
+  <!-- Google Fonts: Barlow Condensed (Headings/Prices) & Inter (Body/UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;1,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Google Material Symbols Outlined -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+
+  <!-- Plain CSS3 Global & Browse Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. SHARED HEADER & NAVIGATION
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container header-container">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-link" aria-label="Borrowly Home">
+        <img src="stitch_borrowly_peer_rental_marketplace/screenshot_2026_10_19_005657.png/screen.png" alt="Borrowly" class="brand-logo-img">
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <a href="browse.html" class="nav-link active">BROWSE RENTALS</a>
+        <a href="index.html#how-it-works" class="nav-link">HOW IT WORKS</a>
+        <a href="index.html#categories" class="nav-link">CATEGORIES</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <div class="header-search">
+          <span class="material-symbols-outlined">search</span>
+          <input type="text" class="header-search-input" placeholder="Search gear in Karachi, Lahore..." aria-label="Search items">
+        </div>
+
+        <a href="login.html" class="nav-link" style="font-size: 1.125rem;">LOG IN</a>
+
+        <a href="list-item.html" class="btn btn-primary">LIST AN ITEM</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       MAIN CONTENT: BROWSE MARKETPLACE CATALOG
+       ======================================================================== -->
+  <main class="main-content">
+
+    <!-- ======================================================================
+         1. HERO SECTION (DARK BAND WITH SEARCH & FILTERS)
+         ====================================================================== -->
+    <section class="browse-hero" aria-label="Marketplace Overview and Search">
+      <div class="container browse-hero-content">
+        <!-- Headline & Editorial Lead -->
+        <div>
+          <div class="hero-eyebrow">
+            <span class="hero-dot"></span>
+            <span class="hero-eyebrow-text">PAKISTAN'S PEER-TO-PEER RENTAL NETWORK</span>
+          </div>
+
+          <h1 class="browse-hero-title">
+            <span>RENT ANYTHING.</span><br>
+            <span style="color: var(--color-primary-accent);">BORROW LOCALLY.</span>
+          </h1>
+
+          <p class="browse-hero-sub">
+            Peer-to-peer everyday item rentals across Pakistan. Access high-grade equipment, electronics, and study essentials directly from verified local owners.
+          </p>
+        </div>
+
+        <!-- 3 Trust Micro-Pillars -->
+        <div class="browse-pillars-row">
+          <div class="browse-pillar-item">
+            <span class="material-symbols-outlined">payments</span>
+            <span>DAILY RATES IN PKR (NO COMMISSIONS)</span>
+          </div>
+          <div class="browse-pillar-item">
+            <span class="material-symbols-outlined">handshake</span>
+            <span>DIRECT OWNER &amp; BORROWER CONTACT</span>
+          </div>
+          <div class="browse-pillar-item">
+            <span class="material-symbols-outlined">verified_user</span>
+            <span>VERIFIED LOCAL PICKUP IN MAJOR CITIES</span>
+          </div>
+        </div>
+
+        <!-- Search & Filter Controls Card (Visual UI Only) -->
+        <div class="browse-filters-box">
+          <form class="browse-filters-grid" onsubmit="event.preventDefault();">
+            <!-- Text Search -->
+            <div class="browse-filter-field">
+              <span class="material-symbols-outlined">search</span>
+              <input type="text" class="browse-filter-input" placeholder="Search tools, DSLR cameras, graphing calculators, camping gear..." aria-label="Search items">
+            </div>
+
+            <!-- Category Selector -->
+            <div class="browse-filter-field">
+              <span class="material-symbols-outlined">category</span>
+              <select class="browse-filter-select" aria-label="Select Category">
+                <option value="">All Categories</option>
+                <option value="tools">Tools &amp; Hardware</option>
+                <option value="electronics">Electronics &amp; Calculators</option>
+                <option value="outdoor">Sports &amp; Outdoors</option>
+                <option value="study">Books &amp; Study Material</option>
+                <option value="home">Kitchen &amp; Home</option>
+              </select>
+            </div>
+
+            <!-- City / Location Dropdown -->
+            <div class="browse-filter-field">
+              <span class="material-symbols-outlined">location_on</span>
+              <select class="browse-filter-select" aria-label="Select City">
+                <option value="">All Pakistan</option>
+                <option value="lahore">Lahore</option>
+                <option value="karachi">Karachi</option>
+                <option value="islamabad">Islamabad</option>
+                <option value="rawalpindi">Rawalpindi</option>
+                <option value="multan">Multan</option>
+              </select>
+            </div>
+
+            <!-- Find Rentals CTA -->
+            <div>
+              <button type="submit" class="btn btn-primary browse-filter-btn">
+                <span>FIND RENTALS</span>
+              </button>
+            </div>
+          </form>
+
+          <!-- Popular Area Pills -->
+          <div class="browse-areas-row">
+            <span class="browse-areas-label">Popular Areas:</span>
+            <span class="browse-area-pill">Karachi, DHA</span>
+            <span class="browse-area-pill">Lahore, Johar Town</span>
+            <span class="browse-area-pill">Islamabad, F-10</span>
+            <span class="browse-area-pill">Multan, Gulgasht</span>
+            <span class="browse-area-pill">Rawalpindi, Bahria</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         2. VALUE PROPOSITIONS STRIP
+         ====================================================================== -->
+    <section class="browse-value-strip" aria-label="Borrowly Rental Benefits">
+      <div class="container">
+        <div class="browse-value-grid">
+          <!-- Value Prop 1 -->
+          <div class="browse-value-item">
+            <span class="material-symbols-outlined">currency_exchange</span>
+            <div>
+              <h3 class="browse-value-title">100% DIRECT CASH SETTLEMENT</h3>
+              <p class="browse-value-desc">Both parties exchange details &amp; settle rental fees directly in PKR cash on pickup.</p>
+            </div>
+          </div>
+
+          <!-- Value Prop 2 -->
+          <div class="browse-value-item">
+            <span class="material-symbols-outlined">price_check</span>
+            <div>
+              <h3 class="browse-value-title">DAILY FIXED RATES</h3>
+              <p class="browse-value-desc">Explicit daily prices starting from Rs. 150/day. No hidden commissions or platform cuts.</p>
+            </div>
+          </div>
+
+          <!-- Value Prop 3 -->
+          <div class="browse-value-item">
+            <span class="material-symbols-outlined">calendar_month</span>
+            <div>
+              <h3 class="browse-value-title">DATED BORROWING REQUESTS</h3>
+              <p class="browse-value-desc">Select exact required calendar dates with immediate owner verification.</p>
+            </div>
+          </div>
+
+          <!-- Value Prop 4 -->
+          <div class="browse-value-item">
+            <span class="material-symbols-outlined">construction</span>
+            <div>
+              <h3 class="browse-value-title">EVERYDAY UTILITY</h3>
+              <p class="browse-value-desc">Heavy power tools, engineering books, cameras, and outdoor camping kits.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. EXPLORE CATEGORIES (LIGHT CANVAS)
+         ====================================================================== -->
+    <section class="categories-section" id="categories">
+      <div class="container">
+        <div class="browse-header-row">
+          <div class="section-title-wrap">
+            <div class="section-accent-line"></div>
+            <h2 class="section-title">EXPLORE CATEGORIES</h2>
+            <div class="section-accent-line"></div>
+          </div>
+        </div>
+
+        <div class="categories-grid">
+          <!-- Cat 1 -->
+          <div class="category-card">
+            <div class="category-img-wrap">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGQYhQw1keCzI3kuQRizKTG1o9UCtUOU2j0Zby7CWatKMkrU4Frngioe_G8DXcWosC5gCHeDw0j6IwEUGMHXFho2rg4LxN3-Fu4T02SSQ79M_Bssc-KCBQY0cY0W4fpD-Oe45CTxmAm1qah0xGL3xZ7LiZ05hxTbarqW02UizuFH8kSfj508Al0dkRTQgbgsaw_DCJt08oYNxfgUj2X140a29vKHKF806lIUCA5XTs1DoNaXU_8Rbm" alt="Electronics & Cameras" class="category-img">
+            </div>
+            <h3 class="category-title">ELECTRONICS</h3>
+            <p class="category-desc">Scientific calculators, DSLRs, lenses &amp; projectors.</p>
+            <span class="category-link-tag">BROWSE NOW &gt;</span>
+          </div>
+
+          <!-- Cat 2 -->
+          <div class="category-card">
+            <div class="category-img-wrap">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWaX9shX1eBMvNmx3lEV7ZWx6ywcEBp79xjGx8zIcv_z64dx6qYe6Pa9-g1NjfLcCJ7I7WeYp_2fheMNnHsELI4pCjvn36_BL51Bjk28V4UPkw4Gs499NoQita_D2O40_6kWrqqoOMc6g-B_YutJarWCjqfKuEuhCltrXLjWzxGv5lskReeHOIYirdGQlAydpUhEJJBsk4nX35VasBBA_xlPoFtwdQhJqGv7caJMvcmWrvNW6jeOjw" alt="Tools & Hardware" class="category-img">
+            </div>
+            <h3 class="category-title">TOOLS &amp; HARDWARE</h3>
+            <p class="category-desc">Rotary hammers, pressure washers &amp; drills.</p>
+            <span class="category-link-tag">BROWSE NOW &gt;</span>
+          </div>
+
+          <!-- Cat 3 -->
+          <div class="category-card">
+            <div class="category-img-wrap">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTQ5vC4BXjXqKkRJnEJjCvACDVMnfcwW7Hv4BSSicmVV4_UpqiMQE87L9gsxYwE0dJb4OYyW0oDGCqOEn85RENLZaogxDeTvjrOUwwx_C6Q2N7Yfu_wm0w-QgCbotLVDBlueEeK-vc23V3z8aez7_8iBIWPW4Hv9vUBkCu5s_t1__bTqgWNoor9FvLd8uOKhv5AThI9NqZ45UUjsIhmcdPNRKrluowmo04ecrccxsCCWge6hijEyYj" alt="Sports & Outdoor" class="category-img">
+            </div>
+            <h3 class="category-title">SPORTS &amp; OUTDOOR</h3>
+            <p class="category-desc">Trekking tents, sleeping bags, mats &amp; rackets.</p>
+            <span class="category-link-tag">BROWSE NOW &gt;</span>
+          </div>
+
+          <!-- Cat 4 -->
+          <div class="category-card">
+            <div class="category-img-wrap">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEqpPMx7wyA7GGxDzoE-P5E3swKPlnMhADQMj9NN-gEj9WmZhf1p0oLqe5gKvPUCARqOFfekSs-z2sLC1oeJHMQiuxdoiVW_vtAH1NTRSfsFqft23GtNB-IS1xXIjRo1DY5gm9mTwP4IrDaTAUBqk5BHBnn_XC_qxZOtHZAPekSBomFJeLjVVBEXqnueMWqiNqRT2FCHNSiPkrHAtzKYuVCH0GHop6iZLd3PFtEWdKxypDWW1HVfsS" alt="Kitchen & Home" class="category-img">
+            </div>
+            <h3 class="category-title">KITCHEN &amp; HOME</h3>
+            <p class="category-desc">Commercial juicers, spot carpet cleaners &amp; fryers.</p>
+            <span class="category-link-tag">BROWSE NOW &gt;</span>
+          </div>
+
+          <!-- Cat 5 -->
+          <div class="category-card">
+            <div class="category-img-wrap">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-ai4FaeZrOzfWbhJFPeXSm1MJ4O1O6Rcj6iwelZCDzzw7Z-iK89lfATAddS7Ro-rlP69U3hsiOhq38GAqK6em_8IZFh-M-unsjJjdieqHrQ2yOI0OXuj2A2oCisSC3TtKeyuWb-CGD-5XakeejPA4hx6KQst1aggYzeHOUf7PNj6KV5NWopTHTCn3bUKdoIdWkSCHWHaiVuXJTlGdkU60OSX--bry5U8YmucohXySHXXqasMMBMhG" alt="Academic & Books" class="category-img">
+            </div>
+            <h3 class="category-title">ACADEMIC &amp; BOOKS</h3>
+            <p class="category-desc">Engineering textbooks, ACCA and CFA prep sets.</p>
+            <span class="category-link-tag">BROWSE NOW &gt;</span>
+          </div>
+
+          <!-- Cat 6 -->
+          <div class="category-card">
+            <div class="category-img-wrap">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXjSwV7EqvcY2tbwiDpp6N9dlTLUNKI4iBI7mxwpbmJ7yW3NBIzm1w9EpiJHD5TJMpL1vDWK9qh2c75gsyiBLLKUXPk9QBRfBcWp5DAPScQxdiRXms4TUebCkRrxqF4--760quFHtFSCHtPCbtSBNrKRiHvnLKrokUM2t6fz_tWCf6NBMsO-OHayES_BsB1X2k5tpbuLtyJd8YihWXU_-rU28IKMUzkBnsqkBYvnKlqGTKkGhHS5k3" alt="Event & Apparel" class="category-img">
+            </div>
+            <h3 class="category-title">EVENT &amp; APPAREL</h3>
+            <p class="category-desc">Formal event blazers, sherwanis &amp; harnesses.</p>
+            <span class="category-link-tag">BROWSE NOW &gt;</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. FEATURED RENTALS GRID (WHITE SECTION)
+         ====================================================================== -->
+    <section class="browse-section">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="browse-header-row">
+          <div class="section-title-wrap">
+            <div class="section-accent-line"></div>
+            <h2 class="section-title">POPULAR RENTALS NEAR YOU</h2>
+            <div class="section-accent-line"></div>
+          </div>
+        </div>
+
+        <!-- Category Sub-Filter Chips (Visual Only) -->
+        <div class="subfilter-row">
+          <span class="subfilter-chip active">ALL ITEMS</span>
+          <span class="subfilter-chip">TOOLS &amp; HARDWARE</span>
+          <span class="subfilter-chip">ELECTRONICS</span>
+          <span class="subfilter-chip">OUTDOOR GEAR</span>
+          <span class="subfilter-chip">STUDY MATERIALS</span>
+        </div>
+
+        <!-- 8 Real Pakistani Peer Rental Item Cards -->
+        <div class="items-grid">
+          <!-- Card 1 -->
+          <article class="item-card">
+            <div class="item-media-wrap">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoPLFmT0mpWJAa8pn3C-YPJpFsX9lhH4RB7RFiW1WxyfP9EyI2qbh6Z1Q_xHaylDtX_6mSi49baLwvRghsmUMoeAOTz7UPSvWtbqwhEGaXmRcLFpJpe3t7jGkeNejXruREUx-ZgmChFy6QisYQl3gNFcbjVNUHWPN2N8FdlEmdQeRsjqORHdiBX2ohFDMzCFNnvSwsfp56H3ZDLI0_4cn9CXS322cR5ZAewb_QzLy2l0cvlEUIGtuY" alt="Bosch Rotary Hammer Drill" class="item-img">
+              <span class="badge badge-available item-badge-top">AVAILABLE</span>
+            </div>
+            <div class="item-info">
+              <span class="item-category-tag">TOOLS &amp; HARDWARE</span>
+              <h3 class="item-name">Bosch 800W Rotary Hammer Drill with SDS Plus Bit Set</h3>
+              <div class="item-meta-row">
+                <span class="item-meta-item"><span class="material-symbols-outlined">location_on</span> Good • Lahore, Johar Town</span>
+              </div>
+              <div class="item-dates-pill">
+                <span class="material-symbols-outlined">event_available</span>
+                <span>24 Oct - 15 Nov 2026</span>
+              </div>
+              <div class="item-divider"></div>
+              <div class="item-price-owner-row">
+                <div class="item-rate-wrap">
+                  <span class="item-price">Rs. 750</span>
+                  <span class="item-period">/ day</span>
+                </div>
+                <div class="item-owner-info" title="Listed by Tariq A.">
+                  <div class="owner-avatar">TA</div>
+                  <span class="owner-name">Tariq A.</span>
+                </div>
+              </div>
+              <a href="item-details.html?id=1" class="btn btn-dark item-action-btn">
+                <span>VIEW DETAILS</span>
+                <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="item-card">
+            <div class="item-media-wrap">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPLC57ubWaosNCx7lZRtax3J9fjw8c3sWOREPAZJWSBJ7ztaDjl5HlABKRCcbgxev7UA01pg2-J1umliMdBGpIDm1lgfzqfjp_TEFdNhiEWwQn6O1ncHw8Zu-SODtwGE2KhM3l4-a_FzBYzFaOqSytOrJMwJh6z5KLaNNnfYinPAfXV2wQTvIiGvFkb0nO58CyQLgoEREIGP2HYB2Cxf9geMBDypfRckc7tMV422M9dpfseKQEY09P" alt="Casio fx-991EX Calculator" class="item-img">
+              <span class="badge badge-available item-badge-top">AVAILABLE</span>
+            </div>
+            <div class="item-info">
+              <span class="item-category-tag">ELECTRONICS</span>
+              <h3 class="item-name">Casio FX-991EX ClassWiz Scientific Calculator</h3>
+              <div class="item-meta-row">
+                <span class="item-meta-item"><span class="material-symbols-outlined">location_on</span> Like New • Karachi, Gulshan</span>
+              </div>
+              <div class="item-dates-pill">
+                <span class="material-symbols-outlined">event_available</span>
+                <span>Immediate Available</span>
+              </div>
+              <div class="item-divider"></div>
+              <div class="item-price-owner-row">
+                <div class="item-rate-wrap">
+                  <span class="item-price">Rs. 200</span>
+                  <span class="item-period">/ day</span>
+                </div>
+                <div class="item-owner-info" title="Listed by Bilal M.">
+                  <div class="owner-avatar">BM</div>
+                  <span class="owner-name">Bilal M.</span>
+                </div>
+              </div>
+              <a href="item-details.html?id=2" class="btn btn-dark item-action-btn">
+                <span>VIEW DETAILS</span>
+                <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="item-card">
+            <div class="item-media-wrap">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWiJksx2EUNSyATdh6nOhp_57GMQoGNwl5l8b3fI1XmXOVrsX8aAaSC1t40KEIWh07cMtaoCl29Tb2CiRa8U-YfAN5wvhEqaESDdMy88Wg6S0yx56WW3D1Bc24ydFgmi8jzDgBLVLrwPlO_C7BOzN-jLCSjPvJ_7ruKO086UFuSEn8CtlRkE8ZqMr51EbeGO-kwFbbGH6CBKL7INDtwYG4oSbWPfqBfT0MIaD7g4LsWbjrMXGkRL_2" alt="Sony Alpha A7 III Camera" class="item-img">
+              <span class="badge badge-available item-badge-top">AVAILABLE</span>
+            </div>
+            <div class="item-info">
+              <span class="item-category-tag">ELECTRONICS</span>
+              <h3 class="item-name">Sony Alpha A7 III Full-Frame Camera Body</h3>
+              <div class="item-meta-row">
+                <span class="item-meta-item"><span class="material-symbols-outlined">location_on</span> Pristine • Islamabad, F-10</span>
+              </div>
+              <div class="item-dates-pill">
+                <span class="material-symbols-outlined">event_available</span>
+                <span>28 Oct - 10 Nov 2026</span>
+              </div>
+              <div class="item-divider"></div>
+              <div class="item-price-owner-row">
+                <div class="item-rate-wrap">
+                  <span class="item-price">Rs. 3,500</span>
+                  <span class="item-period">/ day</span>
+                </div>
+                <div class="item-owner-info" title="Listed by Hamza S.">
+                  <div class="owner-avatar">HS</div>
+                  <span class="owner-name">Hamza S.</span>
+                </div>
+              </div>
+              <a href="item-details.html?id=3" class="btn btn-dark item-action-btn">
+                <span>VIEW DETAILS</span>
+                <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="item-card">
+            <div class="item-media-wrap">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsUXNLXG2B00D4ANy3nvGX3e4bQdFIoCKW-a2b8YLqzcJ1LcQQMbZBPkK4J6ATxu3sITFRIYc7PPloX3dDU25q4vI0lzchaOUE-_8TohcD7N7lzwgf6cEcGLilIBMA3BNEbmr33fRW1H-x66o_vhGD_ivKG7oZHKRQFC1e0mIEF6tTmiUCTjkU0Yur3Y1EHSH4H91GSSMJ0e8lU9CWWMRHysfj0e9dbQcB13tBPK4hBAeh5yqvutzp" alt="Coleman 4-Person Camping Tent" class="item-img">
+              <span class="badge badge-available item-badge-top">AVAILABLE</span>
+            </div>
+            <div class="item-info">
+              <span class="item-category-tag">SPORTS &amp; OUTDOOR</span>
+              <h3 class="item-name">Coleman 4-Person Waterproof Camping Tent</h3>
+              <div class="item-meta-row">
+                <span class="item-meta-item"><span class="material-symbols-outlined">location_on</span> Good • Rawalpindi, Bahria</span>
+              </div>
+              <div class="item-dates-pill">
+                <span class="material-symbols-outlined">event_available</span>
+                <span>Available Weekend</span>
+              </div>
+              <div class="item-divider"></div>
+              <div class="item-price-owner-row">
+                <div class="item-rate-wrap">
+                  <span class="item-price">Rs. 1,200</span>
+                  <span class="item-period">/ day</span>
+                </div>
+                <div class="item-owner-info" title="Listed by Usman K.">
+                  <div class="owner-avatar">UK</div>
+                  <span class="owner-name">Usman K.</span>
+                </div>
+              </div>
+              <a href="item-details.html?id=4" class="btn btn-dark item-action-btn">
+                <span>VIEW DETAILS</span>
+                <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="item-card">
+            <div class="item-media-wrap">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnGehLgXfAqpAp5W_sglYzq4Zl3jsyNMOP8guueji6Kkxpljse_vh0dwE6ZJojlO8p2j_rwWWRLIZPeevwBy30bAmJwtXP-MgOvSNSUG5Rc1BMUBd_4eil8euYwKE99ktHDy6jnKbk-4cPCfBFhiMk0tOOFsLTvXe_DvZdvttEh76_QQ55ZIlYRlHGijFTdmf-dDCW02MpI_XSSwNpmGOdPnyVgqa3a3UrF5EWEt7vp3KH65aROXqE" alt="Karcher K2 Pressure Washer" class="item-img">
+              <span class="badge badge-available item-badge-top">AVAILABLE</span>
+            </div>
+            <div class="item-info">
+              <span class="item-category-tag">TOOLS &amp; HARDWARE</span>
+              <h3 class="item-name">Karcher K2 High Pressure Washer with Foam Jet</h3>
+              <div class="item-meta-row">
+                <span class="item-meta-item"><span class="material-symbols-outlined">location_on</span> Good • Multan, Gulgasht</span>
+              </div>
+              <div class="item-dates-pill">
+                <span class="material-symbols-outlined">event_available</span>
+                <span>25 Oct - 30 Nov 2026</span>
+              </div>
+              <div class="item-divider"></div>
+              <div class="item-price-owner-row">
+                <div class="item-rate-wrap">
+                  <span class="item-price">Rs. 950</span>
+                  <span class="item-period">/ day</span>
+                </div>
+                <div class="item-owner-info" title="Listed by Farooq R.">
+                  <div class="owner-avatar">FR</div>
+                  <span class="owner-name">Farooq R.</span>
+                </div>
+              </div>
+              <a href="item-details.html?id=5" class="btn btn-dark item-action-btn">
+                <span>VIEW DETAILS</span>
+                <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="item-card">
+            <div class="item-media-wrap">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR_brIBSBQr5qRiWTYlvYq6xrxmIAQewf2DIXup8Y5m2d73Wxy4a_4IhhBTkU1psUGR0VLGPHFYT_XKI_tmSDYl-JINE_9lwMNZNIeQ-BzWRT5xi9xVwBg_LprJZySWfXO_b303vcOD3ntCKSxbNHfVt0LxsjXbB_S_Ji0kzmK7ndqHPhZGiUDiBQqXFlBKjwyNeBE6mdtWz48e72-0cZEp7RsNIyEqtHSEAY0iMBfbAfXl96RFXbn" alt="Medical Physiology Guyton & Hall" class="item-img">
+              <span class="badge badge-available item-badge-top">AVAILABLE</span>
+            </div>
+            <div class="item-info">
+              <span class="item-category-tag">BOOKS &amp; STUDY</span>
+              <h3 class="item-name">Medical Physiology Guyton &amp; Hall 14th Edition</h3>
+              <div class="item-meta-row">
+                <span class="item-meta-item"><span class="material-symbols-outlined">location_on</span> Clean • Lahore, Garden Town</span>
+              </div>
+              <div class="item-dates-pill">
+                <span class="material-symbols-outlined">event_available</span>
+                <span>Term Rental Available</span>
+              </div>
+              <div class="item-divider"></div>
+              <div class="item-price-owner-row">
+                <div class="item-rate-wrap">
+                  <span class="item-price">Rs. 250</span>
+                  <span class="item-period">/ day</span>
+                </div>
+                <div class="item-owner-info" title="Listed by Ayesha N.">
+                  <div class="owner-avatar">AN</div>
+                  <span class="owner-name">Ayesha N.</span>
+                </div>
+              </div>
+              <a href="item-details.html?id=6" class="btn btn-dark item-action-btn">
+                <span>VIEW DETAILS</span>
+                <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 7 -->
+          <article class="item-card">
+            <div class="item-media-wrap">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1Nla88LSBbcdmx0Vi3F_KM3-S8Gw6NxDwqb9UKVjHVnpyV3QkyVCEZKDSoOQ90-yAzMFa3l0h_vnxXaOfG7tXMqJjW42Ivhd5M6ACfl4xwMiyPwedNuJOBKBStcgSfkhC9AXkuAgABPF5Qf0nXcUAWeepF4uvx1XkNY-03C3rcm4Jdo2koBxYgUCAcW2TDxN4DRlKoKUiS2L6DTQ8DxdYUN9k5j8xhThmcvLTU6h3_S9APfLz7r0D" alt="DeWalt 20V Circular Saw" class="item-img">
+              <span class="badge badge-available item-badge-top">AVAILABLE</span>
+            </div>
+            <div class="item-info">
+              <span class="item-category-tag">TOOLS &amp; HARDWARE</span>
+              <h3 class="item-name">DeWalt 20V Cordless Circular Saw with Battery</h3>
+              <div class="item-meta-row">
+                <span class="item-meta-item"><span class="material-symbols-outlined">location_on</span> Excellent • Karachi, DHA Ph 6</span>
+              </div>
+              <div class="item-dates-pill">
+                <span class="material-symbols-outlined">event_available</span>
+                <span>Immediate Available</span>
+              </div>
+              <div class="item-divider"></div>
+              <div class="item-price-owner-row">
+                <div class="item-rate-wrap">
+                  <span class="item-price">Rs. 1,100</span>
+                  <span class="item-period">/ day</span>
+                </div>
+                <div class="item-owner-info" title="Listed by Zainab T.">
+                  <div class="owner-avatar">ZT</div>
+                  <span class="owner-name">Zainab T.</span>
+                </div>
+              </div>
+              <a href="item-details.html?id=7" class="btn btn-dark item-action-btn">
+                <span>VIEW DETAILS</span>
+                <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 8 -->
+          <article class="item-card">
+            <div class="item-media-wrap">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYfMI1I413mlGj_ImDdYEYbTJByUyiOCrU1Vm_XPP7is5WW7w7JBKAXIq3W6KbgZLxFfu-0KI55jlkX6c5jNFNaWsY8fkRBxN-Yk4BVU3d9GcafzksXIX5kp6PrNIDhhBU4GCQ3o1W-NcjyLCzYCKULhJY_uzsR5gBa6jKoiH8BH6AdE8L6HwM7JD3mPuviEasZYesaswph_58249Es4iE-q5-4w0EI62OV1oUBod7gvJYYJgFb02e" alt="Aluminum Extension Ladder" class="item-img">
+              <span class="badge badge-available item-badge-top">AVAILABLE</span>
+            </div>
+            <div class="item-info">
+              <span class="item-category-tag">TOOLS &amp; HARDWARE</span>
+              <h3 class="item-name">Heavy Duty Aluminum Extension Ladder 16ft</h3>
+              <div class="item-meta-row">
+                <span class="item-meta-item"><span class="material-symbols-outlined">location_on</span> Sturdy • Faisalabad, Kohinoor</span>
+              </div>
+              <div class="item-dates-pill">
+                <span class="material-symbols-outlined">event_available</span>
+                <span>Flexible Dates</span>
+              </div>
+              <div class="item-divider"></div>
+              <div class="item-price-owner-row">
+                <div class="item-rate-wrap">
+                  <span class="item-price">Rs. 600</span>
+                  <span class="item-period">/ day</span>
+                </div>
+                <div class="item-owner-info" title="Listed by Ahmed V.">
+                  <div class="owner-avatar">AV</div>
+                  <span class="owner-name">Ahmed V.</span>
+                </div>
+              </div>
+              <a href="item-details.html?id=8" class="btn btn-dark item-action-btn">
+                <span>VIEW DETAILS</span>
+                <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. TRANSPARENT PEER WORKFLOW & OWNER CALLOUT (DARK BAND)
+         ====================================================================== -->
+    <section class="browse-workflow-section" aria-label="Transparent Peer Workflow">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="browse-workflow-header">
+          <div class="section-title-wrap" style="justify-content: center; margin-bottom: 0.5rem;">
+            <div class="section-accent-line"></div>
+            <span class="hero-eyebrow-text" style="color: var(--color-primary-accent);">TRANSPARENT PEER WORKFLOW</span>
+            <div class="section-accent-line"></div>
+          </div>
+          <h2 class="section-title" style="color: var(--color-text-white);">HOW BORROWLY WORKS</h2>
+          <p class="browse-hero-sub" style="margin: 0.5rem auto 0 auto; text-align: center;">
+            A purely direct exchange protocol. No escrow markups, no card commissions.
+          </p>
+        </div>
+
+        <!-- 3 Step Cards -->
+        <div class="browse-workflow-grid">
+          <!-- Step 1 -->
+          <div class="browse-workflow-card">
+            <div class="browse-workflow-top">
+              <span class="browse-workflow-step-num">01</span>
+              <span class="material-symbols-outlined">date_range</span>
+            </div>
+            <div>
+              <h3 class="browse-workflow-title">FIND &amp; REQUEST DATES</h3>
+              <p class="browse-workflow-desc">
+                Browse listings in your immediate city district. Pick the exact item you require and submit your designated rental calendar dates.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="browse-workflow-card">
+            <div class="browse-workflow-top">
+              <span class="browse-workflow-step-num">02</span>
+              <span class="material-symbols-outlined">how_to_reg</span>
+            </div>
+            <div>
+              <h3 class="browse-workflow-title">OWNER APPROVAL</h3>
+              <p class="browse-workflow-desc">
+                The gear owner reviews your booking dates and profile. Once verified and confirmed, both parties are notified instantly.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="browse-workflow-card">
+            <div class="browse-workflow-top">
+              <span class="browse-workflow-step-num">03</span>
+              <span class="material-symbols-outlined">handshake</span>
+            </div>
+            <div>
+              <h3 class="browse-workflow-title">DIRECT CONTACT &amp; SETTLEMENT</h3>
+              <p class="browse-workflow-desc">
+                Both parties receive each other’s contact details to arrange local pickup. Inspect the gear and settle payment directly in PKR cash.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Listing Callout Strip -->
+        <div class="browse-callout-box">
+          <div>
+            <h4 class="browse-callout-title">HAVE IDLE EQUIPMENT SITTING AT HOME?</h4>
+            <p class="browse-callout-desc">List your tools, cameras, and gear in 2 minutes. Earn daily rental cash in PKR.</p>
+          </div>
+          <a href="list-item.html" class="btn btn-primary" style="height: 3rem; padding: 0 2rem; flex-shrink: 0;">
+            LIST AN ITEM NOW
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       2. SHARED FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main-grid">
+        <!-- Brand Description Column -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-link" aria-label="Borrowly Home">
+            <img src="stitch_borrowly_peer_rental_marketplace/screenshot_2026_10_19_005657.png/screen.png" alt="Borrowly" class="brand-logo-img">
+          </a>
+          <p class="footer-brand-desc">
+            Open peer-to-peer rental marketplace across Pakistan. Rent everyday items directly from owners in your city for affordable daily rates.
+          </p>
+        </div>
+
+        <!-- Categories Column -->
+        <div>
+          <h3 class="footer-col-title">Categories</h3>
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><a href="browse.html?category=electronics">Electronics &amp; Cameras</a></li>
+            <li class="footer-nav-item"><a href="browse.html?category=tools">Power Tools &amp; Equipment</a></li>
+            <li class="footer-nav-item"><a href="browse.html?category=outdoor">Sports &amp; Outdoor Gear</a></li>
+            <li class="footer-nav-item"><a href="browse.html?category=books">Academic &amp; Books</a></li>
+          </ul>
+        </div>
+
+        <!-- Platform Links Column -->
+        <div>
+          <h3 class="footer-col-title">Platform</h3>
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><a href="index.html#how-it-works">How It Works</a></li>
+            <li class="footer-nav-item"><a href="browse.html">Browse Rentals</a></li>
+            <li class="footer-nav-item"><a href="list-item.html">List an Item</a></li>
+            <li class="footer-nav-item"><a href="dashboard.html">Owner Dashboard</a></li>
+          </ul>
+        </div>
+
+        <!-- Rental Rules Column -->
+        <div>
+          <h3 class="footer-col-title">Rental Rules</h3>
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><span>Owner Approvals</span></li>
+            <li class="footer-nav-item"><span>No Double Bookings</span></li>
+            <li class="footer-nav-item"><span>Direct Peer Handoff</span></li>
+            <li class="footer-nav-item"><span>General Locations Only</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar: Copyright & Pakistani Cities -->
+      <div class="footer-bottom-row">
+        <p>&copy; 2026 Borrowly. All rights reserved.</p>
+        <div class="footer-cities-row">
+          <span class="city-pill">Lahore</span>
+          <span class="city-pill">Karachi</span>
+          <span class="city-pill">Islamabad</span>
+          <span class="city-pill">Rawalpindi</span>
+          <span class="city-pill">Multan</span>
+          <span class="city-pill">Peshawar</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
